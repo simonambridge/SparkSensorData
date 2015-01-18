@@ -1,6 +1,8 @@
 #Overview
 
-In this step we will perform the following steps:
+The goal of this exercise is to familiarize your with using the DSE Spark REPL. To use the REPL to interact with cassandra using both the native connection to Cassandra as well as SparkSQL.
+
+In this exercise we will perform the following steps:
 
 1. Start DSE/cassandra with Spark enabled and connect to the Spark command line REPL
 2. Prepare a Cassandra keyspace and table for new data

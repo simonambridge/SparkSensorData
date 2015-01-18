@@ -1,6 +1,8 @@
 #Overview
 
-In this step we will perform the following steps:
+The goal of this exercise is to load a set of data from a local file into a Cassandra table using the DSE Spark REPL.
+
+In this exercise we will perform the following steps:
 
 1. Locate and review the source data for the new tables
 2. Prepare a Cassandra table in the spark_cass keyspace for the new data
@@ -11,9 +13,15 @@ In this step we will perform the following steps:
 
 Local copy of DSE 4.6 installed (This example is based on a tarball install on Mac OS X). Make sure you can get to and interact with the Spark REPL included with DSE.
 
+You need to have a GitHub id and  git installed on your local machine. Further, you must be able to clone GitHub repositories to your local machine.
+
 ##1. Locate and review the source data for the new tables
 
 In order to work with this exercise and the remaining exercises in this example you should clone the git repository to the machine where DSE is located.
+
+Navigate to a directory that you would like to use for this project. From the command line in that directory issue the following command
+
+                git https://github.com/CaryBourgeois/DSE-Spark-HandsOn.git
 
 From the root direct of the downloaded project, move to the data sub directory and ensure that you have the sfpnax_2003_2013-load.csv file. The contents of this file is the daily maximum temperature for the ????
 

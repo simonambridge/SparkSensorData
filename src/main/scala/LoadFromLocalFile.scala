@@ -59,6 +59,14 @@ object LoadFromLocalFile {
      */
     CassandraConnector(sparkConf).withSessionDo { session =>
       /*
+       * Make sure that the keyspace we want to use exists and if not create it.
+       *
+       * Change the topology an replication factor to suit your cluster.
+       */
+      session.execute(s"CREATE KEYSPACE IF NOT EXISTS spark_cass WITH REPLICATION = { 'class':'SimpleStrategy', 'replication_factor':1}")
+
+
+      /*
           Below the data tables are DROPped and re-CREATEd to ensure that we are dealing with new data.
        */
 
@@ -81,6 +89,9 @@ object LoadFromLocalFile {
     /*
      * The following three segments of code load local files containing Maximum and Minimum Temperatures as well as Precipitation.
      * The lines are loaded then parsed based on the "," delimiter. Finally, they are loaded via the RDD.saveToCassandra method.
+     *
+     * The path to these file will need to be altered to reflect path on the target running environment. If you plan on running this
+     * example on a remote cluster you will need to transfer the files to those machines and replace the path appropriately.
      */
 
     // Maximum Temperature
@@ -98,9 +109,15 @@ object LoadFromLocalFile {
     parsedLines = lines.map(line => line.split(","))
     parsedLines.map(p => (p(0), p(1).toInt, p(2).toInt, p(3).toInt, p(4), p(5).toInt, p(6).toInt)).saveToCassandra("spark_cass", "station_prcp", SomeColumns("st_id", "year", "month", "day", "meas", "value", "yyyymmdd"))
 
-    println("Max Temp Table Record Count: ", csc.sql(s"SELECT COUNT(*) FROM spark_cass.station_tmax").take(1).toString())
-    println("Min Temp Table Record Count: ", csc.sql(s"SELECT COUNT(*) FROM spark_cass.station_tmin").first.foreach(println))
-    println("Precipitation Table Record Count: ", csc.sql(s"SELECT COUNT(*) FROM spark_cass.station_prcp").first.foreach(println))
+    /*
+     * The following three lines execute the a simple SparkSQL command to verify the number of records that get loaded into
+     * the three tables.
+     * NOTE: In practice, the output of these three commands is rather had to seperate from the other information that is
+     *       generated as part of the INFO/WARN output from the job.
+     */
+    println("Max Temp Table Record Count: ", csc.sql(s"SELECT COUNT(*) FROM spark_cass.station_tmax").first().foreach(println))
+    println("Min Temp Table Record Count: ", csc.sql(s"SELECT COUNT(*) FROM spark_cass.station_tmin").first().foreach(println))
+    println("Precipitation Table Record Count: ", csc.sql(s"SELECT COUNT(*) FROM spark_cass.station_prcp").first().foreach(println))
 
 
     // Stop the Spark Context. Otherwise, we get some nasty messages in the log.
