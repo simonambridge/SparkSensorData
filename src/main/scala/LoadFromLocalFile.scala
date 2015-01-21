@@ -45,7 +45,6 @@ object LoadFromLocalFile {
       .setJars(Array("target/scala-2.10/DSE-Spark-HandsOn-assembly-1.0.jar"))
       .setMaster("spark://127.0.0.1:7077")
       .setAppName("DSE Spark HandsOn")
-      .set("spark.eventLog.enabled", "false")
 
     // create a new SparkContext
     val sc = new SparkContext(sparkConf)
