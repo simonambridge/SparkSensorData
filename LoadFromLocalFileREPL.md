@@ -21,7 +21,7 @@ In order to work with this exercise and the remaining exercises in this example 
 
 Navigate to a directory that you would like to use for this project. From the command line in that directory issue the following command
 
-                git https://github.com/CaryBourgeois/DSE-Spark-HandsOn.git
+                git clone https://github.com/CaryBourgeois/DSE-Spark-HandsOn.git
 
 From the root direct of the downloaded project, move to the data sub directory and ensure that you have the sfpnax_2003_2013-load.csv file. The contents of this file is the daily maximum temperature for the ????
 
@@ -42,11 +42,11 @@ The fields are:
 
 ##2. Prepare a Cassandra table in the spark_cass keyspace for the new data
 
-First you need to decide how you want to model/specify the Cassandra table. below is one possible way. Keep in mind that the use case for SparkSQL is the ability to overcome some of the limitations of the data model imposed by Cassandra. So feel free to adjust this table structure as it should have no impact on out se case.
+First you need to decide how you want to model/specify the Cassandra table. below is one possible way. Keep in mind that the use case for SparkSQL is the ability to overcome some of the limitations of the data model imposed by Cassandra. So feel free to adjust this table structure as it should have no impact on our use case.
 
 CREATE TABLE IF NOT EXISTS spark_cass.station_max (st_id int, year int, month int, day int, meas text, value int, YYYYMMDD int, PRIMARY KEY(st_id, YYYYMMDD))
 
-With the structure decided we need to create this table so that we have a place to put the data. Us the following step from the Spark REPL.
+With the structure decided we need to create this table so that we have a place to put the data. Use the following step from the Spark REPL.
 
         import com.datastax.spark.connector.cql.CassandraConnector
 
