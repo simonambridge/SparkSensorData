@@ -39,7 +39,7 @@ If this is not the case then please visit the [sbt site](http://www.scala-sbt.or
 
 ##3. Find and edit the Scala code example to ensure that it is configured for your environment
 
-This project was created with the Community Edition of IntelliJ IDEA. The simplest way to get review and modify the scala code is to open the project with this IDE. Alternatively, you can use any text editor to view/edit the file as the build and execute process will work fomr the command line via sbt.
+This project was created with the Community Edition of IntelliJ IDEA. The simplest way to review and modify the scala code is to open the project with this IDE. Alternatively, you can use any text editor to view/edit the file as the build and execute process will work from the command line via sbt.
 
 From the directory where you cloned the github project, navigate to the `/src/main/scala` directory. Locate and open the file `LoadFromLocalFile.scala` file.
 
