@@ -78,6 +78,8 @@ Once you have reviewed the code you will need to make changes to reflect your sp
 
 You will now use sbt to build and run the file you have modified.
 
+  * Navigate back to the root of the project if you changed your path in the previous exercise.
+
   * Run sbt to build the project using the command below form the command line. This command will compile for file we created and build the "fat" jar that will be copied to the Spark master for execution. This could be a lengthy process as sbt probably have to download a number of files. At the end of the process you should have a response of `[success]`
 
         sbt assembly
