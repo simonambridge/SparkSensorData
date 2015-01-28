@@ -51,14 +51,13 @@ This is a very simple Scala/Spark example. It contain one object and `main` meth
   * Prepare the Cassandra keyspace and tables for the new data
     * Obtain a native connection to Cassandra
     * Verify/create the keyspace on the cluster
-    * Drop tables if they already exist and create new tables to recieve the data
+    * Drop tables if they already exist and create new tables to receive the data
     * Close the session variable as it will not be needed again.
   * Read local files and put the contents into the tables
     * Read the local files into a Spark RDD
     * Parse the lines based on the delimiter into another RDD
     * Save the RDD containing the parsed lines into Cassandra using the `saveToCassandra` method
   * Use SparkSQL to validate the load inserted the correct number of records
-  * Clean up and exit making sure to release the Spark Context
 
 Once you have reviewed the code you will need to make changes to reflect your specific system.
 
@@ -68,7 +67,7 @@ Once you have reviewed the code you will need to make changes to reflect your sp
               .setJars(Array("target/scala-2.10/DSE-Spark-HandsOn-assembly-1.0.jar"))
               .setMaster("spark://127.0.0.1:7077")
               .setAppName("DSE Spark HandsOn")
-              .set("spark.eventLog.enabled", "false")
+              
   * Locate the section of the program where the local files are read and substitute the path of your local files for the one that is there.
 
         var lines = sc.textFile(s"file:///Users/carybourgeois/Documents/Training/DSE-Spark-HandsOn/data/sftmax_2003_2013-load.csv")
