@@ -60,7 +60,7 @@ object LoadFromLocalFile {
       /*
        * Make sure that the keyspace we want to use exists and if not create it.
        *
-       * Change the topology an replication factor to suit your cluster.
+       * Change the topology and replication factor to suit your cluster.
        */
       session.execute(s"CREATE KEYSPACE IF NOT EXISTS spark_cass WITH REPLICATION = { 'class':'SimpleStrategy', 'replication_factor':1}")
 
@@ -118,11 +118,6 @@ object LoadFromLocalFile {
     println("Min Temp Table Record Count: ", csc.sql(s"SELECT COUNT(*) FROM spark_cass.station_tmin").first().foreach(println))
     println("Precipitation Table Record Count: ", csc.sql(s"SELECT COUNT(*) FROM spark_cass.station_prcp").first().foreach(println))
 
-
-    // Stop the Spark Context. Otherwise, we get some nasty messages in the log.
-    sc.stop()
-
-    System.exit(0)
   }
 
 }
