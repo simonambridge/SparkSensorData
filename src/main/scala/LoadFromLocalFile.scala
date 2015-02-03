@@ -23,6 +23,7 @@
  */
 import com.datastax.spark.connector._
 import com.datastax.spark.connector.cql.CassandraConnector
+import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.cassandra.CassandraSQLContext
 import org.apache.spark.{SparkContext, SparkConf}
 
@@ -32,6 +33,8 @@ object LoadFromLocalFile {
    * This is the entry point for the application
    */
   def main(args: Array[String]) {
+
+    Logger.getRootLogger.setLevel(Level.WARN)
 
     /*
      * The first step in this process is to set up the context for configuration for the Spark instance being used.
