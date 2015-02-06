@@ -34,7 +34,11 @@ object LoadFromLocalFile {
    */
   def main(args: Array[String]) {
 
-    Logger.getRootLogger.setLevel(Level.WARN)
+    /*
+     * This next line sets the logger level. If you are having trouble getting this program to work you can change the
+     * value from Level.ERROR to LEVEL.WARN or more verbose yet, LEVEL.INFO
+     */
+    Logger.getRootLogger.setLevel(Level.ERROR)
 
     /*
      * The first step in this process is to set up the context for configuration for the Spark instance being used.

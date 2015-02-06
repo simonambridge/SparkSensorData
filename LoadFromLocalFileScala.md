@@ -22,7 +22,7 @@ The ability to install sbt on your local machine is also required.
 
 Navigate to a directory that you would like to use for this project. From the command line in that directory issue the following command
 
-                git https://github.com/CaryBourgeois/DSE-Spark-HandsOn.git
+                git clone https://github.com/CaryBourgeois/DSE-Spark-HandsOn.git
 
 Review the directory to ensure that you have downloaded all of the files from the repository.
 

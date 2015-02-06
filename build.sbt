@@ -10,7 +10,7 @@ libraryDependencies += "org.apache.spark" % "spark-core_2.10" % "1.1.0" % "provi
 
 libraryDependencies += "org.apache.spark" % "spark-sql_2.10" % "1.1.0" % "provided"
 
-libraryDependencies += "com.datastax.spark" %% "spark-cassandra-connector" % "1.1.1" % "provided" //withSources() withJavadoc()
+libraryDependencies += "com.datastax.spark" % "spark-cassandra-connector_2.10" % "1.1.1" % "provided"
 
 //We do this so that Spark Dependencies will not be bundled with our fat jar but will still be included on the classpath
 //When we do a sbt/run
