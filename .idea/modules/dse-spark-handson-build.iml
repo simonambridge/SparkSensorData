@@ -110,5 +110,6 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Xchart" level="project" />
   </component>
 </module>

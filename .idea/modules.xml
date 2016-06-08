@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file:///u02/dev/dse_dev/SparkSensorData/.idea/modules/Spark - Sensor Data Example.iml" filepath="/u02/dev/dse_dev/SparkSensorData/.idea/modules/Spark - Sensor Data Example.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dse-spark-handson-build.iml" filepath="$PROJECT_DIR$/.idea/modules/dse-spark-handson-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/SparkPortStream.iml" filepath="$PROJECT_DIR$/.idea_modules/SparkPortStream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/SparkPortStream-build.iml" filepath="$PROJECT_DIR$/.idea_modules/SparkPortStream-build.iml" />
     </modules>
   </component>
 </project>

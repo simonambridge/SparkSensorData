@@ -1,5 +1,5 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one or more
+	/*
+	 * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
@@ -22,7 +22,9 @@
  * library collisions upon deployment to the runtime.
  */
 
-import org.apache.log4j.{Level, Logger}
+import org.apache.log4j.Level
+import org.apache.log4j.Logger
+
 import org.apache.spark.sql.cassandra.CassandraSQLContext
 import org.apache.spark.{SparkContext, SparkConf}
 
@@ -30,6 +32,10 @@ import org.apache.spark._
 import org.apache.spark.SparkContext._
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.StreamingContext._
+
+import com.datastax.spark.connector._
+import com.datastax.spark.connector.streaming._
+import com.datastax.spark.connector.cql.CassandraConnector
 
 import org.apache.hadoop.io._
 
@@ -40,43 +46,19 @@ import java.io.{DataInputStream, DataOutputStream, IOException}
 import java.lang.{Thread, SecurityException}
 import java.net.{InetAddress, InetSocketAddress, ServerSocket, Socket, SocketTimeoutException, UnknownHostException}
 
-
-import com.datastax.spark.connector._
-import com.datastax.spark.connector.streaming._
-import com.datastax.spark.connector.cql.CassandraConnector
 import com.datastax.driver.core.ConsistencyLevel
 import com.datastax.driver.core.utils.UUIDs
 
 
-
-
-
 object SparkIngest {
 
-  case class Record(name:String, time:Date, value:BigDecimal)
-
-  def createSchema(cc:CassandraConnector, keySpaceName:String, tableName:String) = {
-    cc.withSessionDo { session =>
-      session.execute(s"CREATE KEYSPACE IF NOT EXISTS ${keySpaceName} WITH REPLICATION = { 'class':'SimpleStrategy', 'replication_factor':1}")
-
-      session.execute(s"DROP TABLE IF EXISTS ${keySpaceName}.${tableName};")
-
-      session.execute("CREATE TABLE IF NOT EXISTS " +
-                      s"${keySpaceName}.${tableName} (name text, time timestamp, value decimal, " +
-                      s"PRIMARY KEY(name, time));")
-    }
-  }
-
-  def parseMessage(msg:String) : Record = {
-    val arr = msg.split(",")
-    val time = new Date
-    return Record(arr(0), time, arr(1).toFloat)    
-  }
-
-
-  /* This is the entry point for the application */
-
   def main(args: Array[String]) {
+
+    // Check how many arguments were passed in - none required
+    if (args.length >0) {
+      System.out.println("No parameters required")
+      // System.exit(0);
+    }
 
     /*
      * This next line sets the logger level. If you are having trouble getting this program to work you can change the
@@ -85,13 +67,10 @@ object SparkIngest {
 
     Logger.getRootLogger.setLevel(Level.ERROR)
 
-    /* The first step in this process is to set up the context for configuration for the Spark instance being used.
-     * For this example the configuration reflects running DSE/Spark on the local system. In a production system you
+    /* Set up the context for configuration for the Spark instance being used.
+     * Configuration reflects running DSE/Spark on a local system. In a production system you
      * would want to modify the host and Master to reflect your installation.
-     *
-     * NOTE: later in this example we use local files as the source of the data. On a remote system you would need to
-     *       that your instance of spark had access to those file locations.  */
-
+     */
     val sparkMasterHost = "127.0.0.1"
     val cassandraHost = "127.0.0.1"
     val cassandraKeyspace = "demo"
@@ -101,7 +80,7 @@ object SparkIngest {
     val conf = new SparkConf(true)
       .set("spark.cassandra.connection.host", cassandraHost)
       .set("spark.cleaner.ttl", "3600")
-      .setMaster("local[10]")
+      .setMaster("local[2]")
       .setAppName(getClass.getSimpleName)
 
     // Connect to the Spark cluster:
@@ -125,6 +104,29 @@ object SparkIngest {
 //         }
 //      }
   }
+
+  def createSchema(cc:CassandraConnector, keySpaceName:String, tableName:String) = {
+    cc.withSessionDo { session =>
+      session.execute(s"CREATE KEYSPACE IF NOT EXISTS ${keySpaceName} WITH REPLICATION = { 'class':'SimpleStrategy', 'replication_factor':1}")
+
+      session.execute(s"DROP TABLE IF EXISTS ${keySpaceName}.${tableName};")
+
+      session.execute("CREATE TABLE IF NOT EXISTS " +
+                      s"${keySpaceName}.${tableName} (name text, time timestamp, value decimal, " +
+                      s"PRIMARY KEY(name, time));")
+    }
+  }
+
+  def parseMessage(msg:String) : Record = {
+    val arr = msg.split(",")
+    val time = new Date
+    return Record(arr(0), time, arr(1).toFloat)    
+  }
+
+
+  /* This is the entry point for the application */
+
+  case class Record(name:String, time:Date, value:BigDecimal)
 
 }
 
