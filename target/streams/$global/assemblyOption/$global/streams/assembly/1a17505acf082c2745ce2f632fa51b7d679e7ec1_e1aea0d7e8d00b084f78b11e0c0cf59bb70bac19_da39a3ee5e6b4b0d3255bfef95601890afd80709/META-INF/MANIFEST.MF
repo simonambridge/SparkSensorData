@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Vendor: com.datastax.spark
+Implementation-Title: spark-cassandra-connector
+Implementation-Version: 1.1.1
+Implementation-Vendor-Id: com.datastax.spark
+Specification-Vendor: com.datastax.spark
+Specification-Title: spark-cassandra-connector
+Implementation-URL: https://github.com/datastax/spark-cassandra-connec
+ tor
+Specification-Version: 1.1.1
+

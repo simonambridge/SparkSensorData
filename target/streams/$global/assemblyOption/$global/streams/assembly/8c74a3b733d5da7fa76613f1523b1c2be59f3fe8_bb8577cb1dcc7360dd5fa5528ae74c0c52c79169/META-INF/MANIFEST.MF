@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1416850023384
+Build-Jdk: 1.7.0_60
+Built-By: oliviermichallat
+Bundle-Description: A driver for Apache Cassandra 1.2+ that works exclus
+ ively with the Cassandra Query Language version 3 (CQL3) and Cassandra'
+ s binary protocol.
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: DataStax Java Driver for Apache Cassandra - Core
+Bundle-SymbolicName: com.datastax.driver.core
+Bundle-Version: 2.1.3
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.datastax.driver.core;version="2.1.3";uses:="com.coda
+ hale.metrics,com.datastax.driver.core.exceptions,com.datastax.driver.co
+ re.policies,com.google.common.util.concurrent,javax.net.ssl,org.jboss.n
+ etty.buffer,org.jboss.netty.channel,org.jboss.netty.handler.codec.frame
+ ,org.jboss.netty.handler.codec.oneone,org.jboss.netty.util",com.datasta
+ x.driver.core.exceptions;version="2.1.3";uses:="com.datastax.driver.cor
+ e",com.datastax.driver.core.policies;version="2.1.3";uses:="com.datasta
+ x.driver.core",com.datastax.driver.core.querybuilder;version="2.1.3";us
+ es:="com.datastax.driver.core,com.datastax.driver.core.policies",com.da
+ tastax.driver.core.schemabuilder;version="2.1.3";uses:="com.datastax.dr
+ iver.core,com.google.common.base",com.datastax.driver.core.utils;versio
+ n="2.1.3"
+Import-Package: com.codahale.metrics;version="[3.0,4)",com.google.common
+ .base;version="[14.0,15)",com.google.common.collect;version="[14.0,15)"
+ ,com.google.common.util.concurrent;version="[14.0,15)",javax.net.ssl,ne
+ t.jpountz.lz4;resolution:=optional,org.jboss.netty.bootstrap;version="[
+ 3.9,4)",org.jboss.netty.buffer;version="[3.9,4)",org.jboss.netty.channe
+ l;version="[3.9,4)",org.jboss.netty.channel.group;version="[3.9,4)",org
+ .jboss.netty.channel.socket.nio;version="[3.9,4)",org.jboss.netty.handl
+ er.codec.frame;version="[3.9,4)",org.jboss.netty.handler.codec.oneone;v
+ ersion="[3.9,4)",org.jboss.netty.handler.ssl;version="[3.9,4)",org.jbos
+ s.netty.util;version="[3.9,4)",org.slf4j;version="[1.7,2)",org.xerial.s
+ nappy;version="[1.0,2)";resolution:=optional
+Tool: Bnd-2.1.0.20130426-122213

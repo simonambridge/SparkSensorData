@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Built-By: DreamSweet
+Build-Jdk: 1.7.0_75
+Class-Path: guava-14.0.1.jar netty-all-4.0.23.Final.jar jetty-jsp-7.6.
+ 15.v20140411.jar javax.servlet.jsp-2.1.0.v201105211820.jar org.apache
+ .jasper.glassfish-2.1.0.v201110031002.jar javax.servlet.jsp.jstl-1.2.
+ 0.v201105211821.jar org.apache.taglibs.standard.glassfish-1.2.0.v2011
+ 12081803.jar javax.el-2.1.0.v201105211819.jar com.sun.el-1.0.0.v20110
+ 5211818.jar org.eclipse.jdt.core-3.7.1.jar jetty-webapp-7.6.15.v20140
+ 411.jar jetty-xml-7.6.15.v20140411.jar jetty-util-7.6.15.v20140411.ja
+ r jetty-server-7.6.15.v20140411.jar javax.servlet-2.5.0.v201103041518
+ .jar jetty-continuation-7.6.15.v20140411.jar jetty-http-7.6.15.v20140
+ 411.jar jetty-io-7.6.15.v20140411.jar jetty-servlet-7.6.15.v20140411.
+ jar jetty-security-7.6.15.v20140411.jar slf4j-api-1.7.2.jar slf4j-log
+ 4j12-1.7.2.jar log4j-1.2.17.jar commons-codec-1.5.jar commons-io-2.4.
+ jar libthrift-0.9.1.jar httpclient-4.2.5.jar httpcore-4.2.4.jar commo
+ ns-lang3-3.0.jar curator-recipes-2.1.0-incubating.jar curator-framewo
+ rk-2.1.0-incubating.jar curator-client-2.1.0-incubating.jar zookeeper
+ -3.4.5.jar jline-0.9.94.jar commons-math-2.2.jar jackson-databind-2.3
+ .0.jar jackson-annotations-2.3.0.jar jackson-core-2.3.0.jar hadoop-cl
+ ient-1.0.4.jar hadoop-core-1.0.4.jar xmlenc-0.52.jar commons-configur
+ ation-1.6.jar commons-collections-3.2.1.jar commons-lang-2.4.jar comm
+ ons-digester-1.8.jar commons-beanutils-1.7.0.jar commons-beanutils-co
+ re-1.8.0.jar commons-net-1.4.1.jar commons-el-1.0.jar hsqldb-1.8.0.10
+ .jar oro-2.0.8.jar jackson-mapper-asl-1.0.1.jar jackson-core-asl-1.0.
+ 1.jar commons-logging-1.0.3.jar
+Created-By: Apache Maven 3.2.5
+Archiver-Version: Plexus Archiver
+

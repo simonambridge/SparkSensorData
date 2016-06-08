@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+git-SHA-1: 3f25ad97f209e7653e9f816508252f850abd635f
+Built-By: tdeng
+Build-Jdk: 1.7.0_25
+Created-By: Apache Maven 3.1.1
+Archiver-Version: Plexus Archiver
+
