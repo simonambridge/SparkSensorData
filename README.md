@@ -1,4 +1,4 @@
-H1 DataStax Enterprise - Apache Cassandra with Apache Spark - Sensor Data Ingestion
+#DataStax Enterprise - Apache Cassandra with Apache Spark - Sensor Data Ingestion
 
 Demonstrate high speed ingestion of sensor data
 -----------------------------------------------
