@@ -2,6 +2,12 @@
 [0m[[0mdebug[0m] [0mInput file mappings:[0m
 [0m[[0mdebug[0m] [0m	SparkIngest$Record.class[0m
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/classes/SparkIngest$Record.class[0m
+[0m[[0mdebug[0m] [0m	.casChart.java.swp[0m
+[0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/classes/.casChart.java.swp[0m
+[0m[[0mdebug[0m] [0m	build.sh[0m
+[0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/classes/build.sh[0m
+[0m[[0mdebug[0m] [0m	casChart.sh[0m
+[0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/classes/casChart.sh[0m
 [0m[[0mdebug[0m] [0m	casChart.class[0m
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/classes/casChart.class[0m
 [0m[[0mdebug[0m] [0m	SparkIngest$Record$.class[0m
@@ -14,6 +20,8 @@
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/classes/SparkIngest$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	SparkIngest$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/classes/SparkIngest$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	.Spark-ingest.scala.swp[0m
+[0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/classes/.Spark-ingest.scala.swp[0m
 [0m[[0mdebug[0m] [0m	netCat.class[0m
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/classes/netCat.class[0m
 [0m[[0mdebug[0m] [0m	SparkIngest$$typecreator2$1.class[0m

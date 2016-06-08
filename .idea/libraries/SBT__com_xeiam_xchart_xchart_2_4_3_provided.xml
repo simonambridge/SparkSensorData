@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="SBT: com.xeiam.xchart:xchart:2.4.3:provided">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.xeiam.xchart/xchart/jars/xchart-2.4.3.jar!/"/>
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.xeiam.xchart/xchart/docs/xchart-2.4.3-javadoc.jar!/"/>
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.xeiam.xchart/xchart/srcs/xchart-2.4.3-sources.jar!/"/>
+    </SOURCES>
+  </library>
+</component>

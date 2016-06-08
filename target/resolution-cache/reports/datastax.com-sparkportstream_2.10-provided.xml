@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="provided"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160608210427"/>
+		date="20160608213356"/>
 	<dependencies>
 		<module organisation="com.xeiam.xchart" name="xchart">
 			<revision name="2.4.3" status="release" pubdate="20150109103127" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="157">
