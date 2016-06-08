@@ -1,14 +1,12 @@
-[0m[[0minfo[0m] [0mIncluding from cache: scala-library.jar[0m
+[0m[[0minfo[0m] [0mIncluding: scala-library.jar[0m
 [0m[[0mdebug[0m] [0mCalculate mappings...[0m
 [0m[[0minfo[0m] [0mChecking every *.class/*.jar file's SHA-1.[0m
 [0m[[0minfo[0m] [0mMerging files...[0m
 [0m[[33mwarn[0m] [0mMerging 'META-INF/MANIFEST.MF' with strategy 'discard'[0m
 [0m[[33mwarn[0m] [0mStrategy 'discard' was applied to a file[0m
-[0m[[0minfo[0m] [0mSHA-1: 310b03024b2611f475abecdc613977e10d1be5ff[0m
+[0m[[0minfo[0m] [0mSHA-1: 5a6c558aefd9c2e67a8d9a23f33c4e7e675689d1[0m
 [0m[[0minfo[0m] [0mPackaging /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/SparkPortStream-assembly-1.0.jar ...[0m
 [0m[[0mdebug[0m] [0mInput file mappings:[0m
-[0m[[0mdebug[0m] [0m	.casChart.java.swp[0m
-[0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/streams/$global/assemblyOption/$global/streams/assembly/6fbc67654b3031d1f734e1da73ac7c1045fe329b_dir/.casChart.java.swp[0m
 [0m[[0mdebug[0m] [0m	SparkIngest$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/streams/$global/assemblyOption/$global/streams/assembly/6fbc67654b3031d1f734e1da73ac7c1045fe329b_dir/SparkIngest$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	SparkIngest$$anonfun$2.class[0m
@@ -27,12 +25,8 @@
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/streams/$global/assemblyOption/$global/streams/assembly/6fbc67654b3031d1f734e1da73ac7c1045fe329b_dir/SparkIngest$Record.class[0m
 [0m[[0mdebug[0m] [0m	SparkIngest.class[0m
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/streams/$global/assemblyOption/$global/streams/assembly/6fbc67654b3031d1f734e1da73ac7c1045fe329b_dir/SparkIngest.class[0m
-[0m[[0mdebug[0m] [0m	build.sh[0m
-[0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/streams/$global/assemblyOption/$global/streams/assembly/6fbc67654b3031d1f734e1da73ac7c1045fe329b_dir/build.sh[0m
 [0m[[0mdebug[0m] [0m	casChart.class[0m
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/streams/$global/assemblyOption/$global/streams/assembly/6fbc67654b3031d1f734e1da73ac7c1045fe329b_dir/casChart.class[0m
-[0m[[0mdebug[0m] [0m	casChart.sh[0m
-[0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/streams/$global/assemblyOption/$global/streams/assembly/6fbc67654b3031d1f734e1da73ac7c1045fe329b_dir/casChart.sh[0m
 [0m[[0mdebug[0m] [0m	library.properties[0m
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/streams/$global/assemblyOption/$global/streams/assembly/75bcc748c2ca48abae8452021c12e739388d2c1b_9aae4cb1802537d604e03688cab744ff47b31a7d_da39a3ee5e6b4b0d3255bfef95601890afd80709/library.properties[0m
 [0m[[0mdebug[0m] [0m	netCat.class[0m
@@ -9837,6 +9831,4 @@
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/streams/$global/assemblyOption/$global/streams/assembly/75bcc748c2ca48abae8452021c12e739388d2c1b_9aae4cb1802537d604e03688cab744ff47b31a7d_da39a3ee5e6b4b0d3255bfef95601890afd80709/scala/xml/transform/RuleTransformer$$anonfun$transform$1.class[0m
 [0m[[0mdebug[0m] [0m	scala/xml/transform/RuleTransformer.class[0m
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/streams/$global/assemblyOption/$global/streams/assembly/75bcc748c2ca48abae8452021c12e739388d2c1b_9aae4cb1802537d604e03688cab744ff47b31a7d_da39a3ee5e6b4b0d3255bfef95601890afd80709/scala/xml/transform/RuleTransformer.class[0m
-[0m[[0mdebug[0m] [0m	submit.sh[0m
-[0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/streams/$global/assemblyOption/$global/streams/assembly/6fbc67654b3031d1f734e1da73ac7c1045fe329b_dir/submit.sh[0m
 [0m[[0minfo[0m] [0mDone packaging.[0m

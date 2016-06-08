@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@56531858[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4c91685[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.4[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.4 in sbt-chain[0m
@@ -11026,7 +11026,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1!VectorGraphics2D.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4212ms :: artifacts dl 78ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3869ms :: artifacts dl 50ms[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 compile produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 runtime produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 test produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-test.xml[0m
@@ -11040,5 +11040,5 @@
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 docs produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 pom produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 scala-tool produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (4212ms resolve - 78ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (3869ms resolve - 50ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
