@@ -2,28 +2,35 @@
 
 Demonstrate high speed ingestion of sensor data
 -----------------------------------------------
+
+##Pre-Requisites
+To setup your environment, you'll need the following resources:
+```
 http://xeiam.com/xchart-example-code/
 http://slf4j.org/dist/slf4j-1.7.10.tar.gz
 http://downloads.datastax.com/java-driver/cassandra-java-driver-2.0.2.tar.gz
-
-To setup your environment, you'll need the following resources:
-
 cassandra-driver-core-2.1.0.jar
 netty-3.9.0-Final.jar
 guava-16.0.1.jar
 metrics-core-3.0.2.jar
-slf4j-api-1.7.5.jar
+```
 
-Sources:
-/home/dse/Simon-demo/src/main/scala/Spark-ingest.scala
-/home/dse/Simon-demo/src/main/java/netCat.java
+##Exercise 1
 
-Phase 1
-=======
+Open three terminal windows. First you'll need to clone the repo
 
+```
+$ git clone https://github.com/simonambridge/SparkSensorData
+```
+Now navigate to the repo directory in each of the windows:
+```
+$ cd ~/SparkSensorData
 $ pwd
-/home/dse/SparkSensorData
+~/SparkSensorData
+```
 
+Test that you can build the package from the command line using **sbt**:
+```
 $ sbt package
 [info] Loading project definition from /home/dse/Simon-demo/project
 [info] Set current project to SparkPortStream (in build file:/home/dse/Simon-demo/)
@@ -31,13 +38,13 @@ $ sbt package
 [info] Packaging /home/dse/Simon-demo/target/scala-2.10/sparkportstream_2.10-1.0.jar ...
 [info] Done packaging.
 [success] Total time: 9 s, completed Mar 21, 2015 2:28:15 PM
-
+```
 
 Start the Spark job - *ignore connection refused errors as the port isnt listening yet.
-
+```
 $ dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar -Dspark.cassandra.connection.host=127.0.0.1
-
-In another window (used in push.sh):
+```
+In another window:
 
 $ head SensorData2.csv
 p100,1
