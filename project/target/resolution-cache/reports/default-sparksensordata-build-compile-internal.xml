@@ -9,7 +9,7 @@
 		extra-sbtVersion="0.13"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160608144516"/>
+		date="20160608210425"/>
 	<dependencies>
 		<module organisation="org.scala-sbt" name="sbt">
 			<revision name="0.13.5" status="release" pubdate="20140527094603" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="23">
@@ -587,57 +587,57 @@
 			</revision>
 		</module>
 		<module organisation="com.eed3si9n" name="sbt-assembly">
-			<revision name="0.14.2" status="release" pubdate="20160214222133" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="0">
+			<revision name="0.14.2" status="release" pubdate="20160214222133" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
 				<license name="MIT License" url="https://github.com/sbt/sbt-assembly/blob/master/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="2025" time="1472" location="/home/dse/.ivy2/cache/scala_2.10/sbt_0.13/com.eed3si9n/sbt-assembly/ivy-0.14.2.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/scala_2.10/sbt_0.13/com.eed3si9n/sbt-assembly/ivy-0.14.2.xml.original" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.2/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="2025" time="0" location="/home/dse/.ivy2/cache/scala_2.10/sbt_0.13/com.eed3si9n/sbt-assembly/ivy-0.14.2.xml" searched="false" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.2/ivys/ivy.xml"/>
 				<caller organisation="default" name="sparksensordata-build" conf="compile-internal, compile, provided, optional" rev="0.14.2" rev-constraint-default="0.14.2" rev-constraint-dynamic="0.14.2" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-					<artifact name="sbt-assembly" type="jar" ext="jar" status="successful" details="" size="209361" time="1733" location="/home/dse/.ivy2/cache/scala_2.10/sbt_0.13/com.eed3si9n/sbt-assembly/jars/sbt-assembly-0.14.2.jar">
+					<artifact name="sbt-assembly" type="jar" ext="jar" status="no" details="" size="209361" time="0" location="/home/dse/.ivy2/cache/scala_2.10/sbt_0.13/com.eed3si9n/sbt-assembly/jars/sbt-assembly-0.14.2.jar">
 						<origin-location is-local="false" location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.2/jars/sbt-assembly.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.pantsbuild" name="jarjar">
-			<revision name="1.6.0" status="release" pubdate="20151005191546" resolver="jcenter" artresolver="jcenter" homepage="https://github.com/pantsbuild/jarjar" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="4">
+			<revision name="1.6.0" status="release" pubdate="20151005191546" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/pantsbuild/jarjar" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="4">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="2177" time="140" location="/home/dse/.ivy2/cache/org.pantsbuild/jarjar/ivy-1.6.0.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.pantsbuild/jarjar/ivy-1.6.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/pantsbuild/jarjar/1.6.0/jarjar-1.6.0.pom"/>
+				<metadata-artifact status="no" details="" size="3025" time="0" location="/home/dse/.ivy2/cache/org.pantsbuild/jarjar/ivy-1.6.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/pantsbuild/jarjar/1.6.0/jarjar-1.6.0.pom"/>
 				<caller organisation="com.eed3si9n" name="sbt-assembly" conf="compile" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="0.14.2"/>
 				<artifacts>
-					<artifact name="jarjar" type="jar" ext="jar" status="successful" details="" size="75988" time="335" location="/home/dse/.ivy2/cache/org.pantsbuild/jarjar/jars/jarjar-1.6.0.jar">
+					<artifact name="jarjar" type="jar" ext="jar" status="no" details="" size="75988" time="0" location="/home/dse/.ivy2/cache/org.pantsbuild/jarjar/jars/jarjar-1.6.0.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/pantsbuild/jarjar/1.6.0/jarjar-1.6.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.maven" name="maven-plugin-api">
-			<revision name="3.3.3" status="release" pubdate="20150422125700" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="10">
-				<metadata-artifact status="successful" details="" size="3027" time="176" location="/home/dse/.ivy2/cache/org.apache.maven/maven-plugin-api/ivy-3.3.3.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.apache.maven/maven-plugin-api/ivy-3.3.3.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/maven/maven-plugin-api/3.3.3/maven-plugin-api-3.3.3.pom"/>
+			<revision name="3.3.3" status="release" pubdate="20150422125700" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="10">
+				<metadata-artifact status="no" details="" size="17178" time="0" location="/home/dse/.ivy2/cache/org.apache.maven/maven-plugin-api/ivy-3.3.3.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/maven/maven-plugin-api/3.3.3/maven-plugin-api-3.3.3.pom"/>
 				<caller organisation="org.pantsbuild" name="jarjar" conf="default, compile, runtime, master" rev="3.3.3" rev-constraint-default="3.3.3" rev-constraint-dynamic="3.3.3" callerrev="1.6.0"/>
 				<artifacts>
-					<artifact name="maven-plugin-api" type="jar" ext="jar" status="successful" details="" size="46099" time="210" location="/home/dse/.ivy2/cache/org.apache.maven/maven-plugin-api/jars/maven-plugin-api-3.3.3.jar">
+					<artifact name="maven-plugin-api" type="jar" ext="jar" status="no" details="" size="46099" time="0" location="/home/dse/.ivy2/cache/org.apache.maven/maven-plugin-api/jars/maven-plugin-api-3.3.3.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/maven/maven-plugin-api/3.3.3/maven-plugin-api-3.3.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.eclipse.sisu" name="org.eclipse.sisu.plexus">
-			<revision name="0.3.0" status="release" pubdate="20150219184700" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="14">
-				<metadata-artifact status="successful" details="" size="4170" time="152" location="/home/dse/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.plexus/ivy-0.3.0.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.plexus/ivy-0.3.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.0/org.eclipse.sisu.plexus-0.3.0.pom"/>
+			<revision name="0.3.0" status="release" pubdate="20150219184700" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="14">
+				<metadata-artifact status="no" details="" size="4700" time="0" location="/home/dse/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.plexus/ivy-0.3.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.0/org.eclipse.sisu.plexus-0.3.0.pom"/>
 				<caller organisation="org.apache.maven" name="maven-plugin-api" conf="compile, runtime" rev="0.3.0" rev-constraint-default="0.3.0" rev-constraint-dynamic="0.3.0" callerrev="3.3.3"/>
 				<artifacts>
-					<artifact name="org.eclipse.sisu.plexus" type="eclipse-plugin" ext="jar" status="successful" details="" size="205404" time="358" location="/home/dse/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.plexus/eclipse-plugins/org.eclipse.sisu.plexus-0.3.0.jar">
+					<artifact name="org.eclipse.sisu.plexus" type="eclipse-plugin" ext="jar" status="no" details="" size="205404" time="0" location="/home/dse/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.plexus/eclipse-plugins/org.eclipse.sisu.plexus-0.3.0.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.0/org.eclipse.sisu.plexus-0.3.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.codehaus.plexus" name="plexus-classworlds">
-			<revision name="2.5.2" status="release" pubdate="20140829180800" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="20">
-				<metadata-artifact status="successful" details="" size="7305" time="160" location="/home/dse/.ivy2/cache/org.codehaus.plexus/plexus-classworlds/ivy-2.5.2.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.codehaus.plexus/plexus-classworlds/ivy-2.5.2.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2.pom"/>
+			<revision name="2.5.2" status="release" pubdate="20140829180800" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="20">
+				<metadata-artifact status="no" details="" size="9038" time="0" location="/home/dse/.ivy2/cache/org.codehaus.plexus/plexus-classworlds/ivy-2.5.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2.pom"/>
 				<caller organisation="org.eclipse.sisu" name="org.eclipse.sisu.plexus" conf="compile, runtime" rev="2.5.2" rev-constraint-default="2.5.2" rev-constraint-dynamic="2.5.2" callerrev="0.3.0"/>
 				<artifacts>
-					<artifact name="plexus-classworlds" type="bundle" ext="jar" status="successful" details="" size="52684" time="243" location="/home/dse/.ivy2/cache/org.codehaus.plexus/plexus-classworlds/bundles/plexus-classworlds-2.5.2.jar">
+					<artifact name="plexus-classworlds" type="bundle" ext="jar" status="no" details="" size="52684" time="0" location="/home/dse/.ivy2/cache/org.codehaus.plexus/plexus-classworlds/bundles/plexus-classworlds-2.5.2.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -655,11 +655,11 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.sisu" name="org.eclipse.sisu.inject">
-			<revision name="0.3.0" status="release" pubdate="20150219183300" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="18">
-				<metadata-artifact status="successful" details="" size="2625" time="170" location="/home/dse/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.inject/ivy-0.3.0.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.inject/ivy-0.3.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.0/org.eclipse.sisu.inject-0.3.0.pom"/>
+			<revision name="0.3.0" status="release" pubdate="20150219183300" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="18">
+				<metadata-artifact status="no" details="" size="3514" time="0" location="/home/dse/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.inject/ivy-0.3.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.0/org.eclipse.sisu.inject-0.3.0.pom"/>
 				<caller organisation="org.eclipse.sisu" name="org.eclipse.sisu.plexus" conf="compile, runtime" rev="0.3.0" rev-constraint-default="0.3.0" rev-constraint-dynamic="0.3.0" callerrev="0.3.0"/>
 				<artifacts>
-					<artifact name="org.eclipse.sisu.inject" type="eclipse-plugin" ext="jar" status="successful" details="" size="375267" time="389" location="/home/dse/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.inject/eclipse-plugins/org.eclipse.sisu.inject-0.3.0.jar">
+					<artifact name="org.eclipse.sisu.inject" type="eclipse-plugin" ext="jar" status="no" details="" size="375267" time="0" location="/home/dse/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.inject/eclipse-plugins/org.eclipse.sisu.inject-0.3.0.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.0/org.eclipse.sisu.inject-0.3.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -701,103 +701,103 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.maven" name="maven-artifact">
-			<revision name="3.3.3" status="release" pubdate="20150422125600" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="13">
-				<metadata-artifact status="successful" details="" size="2348" time="167" location="/home/dse/.ivy2/cache/org.apache.maven/maven-artifact/ivy-3.3.3.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.apache.maven/maven-artifact/ivy-3.3.3.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/maven/maven-artifact/3.3.3/maven-artifact-3.3.3.pom"/>
+			<revision name="3.3.3" status="release" pubdate="20150422125600" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="13">
+				<metadata-artifact status="no" details="" size="16741" time="0" location="/home/dse/.ivy2/cache/org.apache.maven/maven-artifact/ivy-3.3.3.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/maven/maven-artifact/3.3.3/maven-artifact-3.3.3.pom"/>
 				<caller organisation="org.apache.maven" name="maven-plugin-api" conf="compile, runtime" rev="3.3.3" rev-constraint-default="3.3.3" rev-constraint-dynamic="3.3.3" callerrev="3.3.3"/>
 				<artifacts>
-					<artifact name="maven-artifact" type="jar" ext="jar" status="successful" details="" size="55090" time="199" location="/home/dse/.ivy2/cache/org.apache.maven/maven-artifact/jars/maven-artifact-3.3.3.jar">
+					<artifact name="maven-artifact" type="jar" ext="jar" status="no" details="" size="55090" time="0" location="/home/dse/.ivy2/cache/org.apache.maven/maven-artifact/jars/maven-artifact-3.3.3.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/maven/maven-artifact/3.3.3/maven-artifact-3.3.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.maven" name="maven-model">
-			<revision name="3.3.3" status="release" pubdate="20150422125600" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="11">
-				<metadata-artifact status="successful" details="" size="4247" time="153" location="/home/dse/.ivy2/cache/org.apache.maven/maven-model/ivy-3.3.3.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.apache.maven/maven-model/ivy-3.3.3.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/maven/maven-model/3.3.3/maven-model-3.3.3.pom"/>
+			<revision name="3.3.3" status="release" pubdate="20150422125600" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="11">
+				<metadata-artifact status="no" details="" size="16677" time="0" location="/home/dse/.ivy2/cache/org.apache.maven/maven-model/ivy-3.3.3.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/maven/maven-model/3.3.3/maven-model-3.3.3.pom"/>
 				<caller organisation="org.apache.maven" name="maven-plugin-api" conf="compile, runtime" rev="3.3.3" rev-constraint-default="3.3.3" rev-constraint-dynamic="3.3.3" callerrev="3.3.3"/>
 				<artifacts>
-					<artifact name="maven-model" type="jar" ext="jar" status="successful" details="" size="160817" time="265" location="/home/dse/.ivy2/cache/org.apache.maven/maven-model/jars/maven-model-3.3.3.jar">
+					<artifact name="maven-model" type="jar" ext="jar" status="no" details="" size="160817" time="0" location="/home/dse/.ivy2/cache/org.apache.maven/maven-model/jars/maven-model-3.3.3.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/maven/maven-model/3.3.3/maven-model-3.3.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.codehaus.plexus" name="plexus-utils">
-			<revision name="3.0.20" status="release" pubdate="20141018210000" resolver="jcenter" artresolver="jcenter" homepage="http://plexus.codehaus.org/plexus-utils" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="12">
-				<metadata-artifact status="successful" details="" size="3810" time="150" location="/home/dse/.ivy2/cache/org.codehaus.plexus/plexus-utils/ivy-3.0.20.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.codehaus.plexus/plexus-utils/ivy-3.0.20.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0.20/plexus-utils-3.0.20.pom"/>
+			<revision name="3.0.20" status="release" pubdate="20141018210000" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://plexus.codehaus.org/plexus-utils" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="12">
+				<metadata-artifact status="no" details="" size="9193" time="0" location="/home/dse/.ivy2/cache/org.codehaus.plexus/plexus-utils/ivy-3.0.20.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0.20/plexus-utils-3.0.20.pom"/>
 				<caller organisation="org.apache.maven" name="maven-model" conf="compile, runtime" rev="3.0.20" rev-constraint-default="3.0.20" rev-constraint-dynamic="3.0.20" callerrev="3.3.3"/>
 				<caller organisation="org.eclipse.sisu" name="org.eclipse.sisu.plexus" conf="compile, runtime" rev="3.0.20" rev-constraint-default="3.0.20" rev-constraint-dynamic="3.0.17" callerrev="0.3.0"/>
 				<caller organisation="org.apache.maven" name="maven-artifact" conf="compile, runtime" rev="3.0.20" rev-constraint-default="3.0.20" rev-constraint-dynamic="3.0.20" callerrev="3.3.3"/>
 				<artifacts>
-					<artifact name="plexus-utils" type="jar" ext="jar" status="successful" details="" size="243128" time="303" location="/home/dse/.ivy2/cache/org.codehaus.plexus/plexus-utils/jars/plexus-utils-3.0.20.jar">
+					<artifact name="plexus-utils" type="jar" ext="jar" status="no" details="" size="243128" time="0" location="/home/dse/.ivy2/cache/org.codehaus.plexus/plexus-utils/jars/plexus-utils-3.0.20.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0.20/plexus-utils-3.0.20.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.ow2.asm" name="asm-commons">
-			<revision name="5.0.4" status="release" pubdate="20150515160500" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="8">
-				<metadata-artifact status="successful" details="" size="2094" time="172" location="/home/dse/.ivy2/cache/org.ow2.asm/asm-commons/ivy-5.0.4.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.ow2.asm/asm-commons/ivy-5.0.4.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/ow2/asm/asm-commons/5.0.4/asm-commons-5.0.4.pom"/>
+			<revision name="5.0.4" status="release" pubdate="20150515160500" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="8">
+				<metadata-artifact status="no" details="" size="4408" time="0" location="/home/dse/.ivy2/cache/org.ow2.asm/asm-commons/ivy-5.0.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/ow2/asm/asm-commons/5.0.4/asm-commons-5.0.4.pom"/>
 				<caller organisation="org.pantsbuild" name="jarjar" conf="default, compile, runtime, master" rev="5.0.4" rev-constraint-default="5.0.4" rev-constraint-dynamic="5.0.4" callerrev="1.6.0"/>
 				<artifacts>
-					<artifact name="asm-commons" type="jar" ext="jar" status="successful" details="" size="41796" time="207" location="/home/dse/.ivy2/cache/org.ow2.asm/asm-commons/jars/asm-commons-5.0.4.jar">
+					<artifact name="asm-commons" type="jar" ext="jar" status="no" details="" size="41796" time="0" location="/home/dse/.ivy2/cache/org.ow2.asm/asm-commons/jars/asm-commons-5.0.4.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/ow2/asm/asm-commons/5.0.4/asm-commons-5.0.4.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.ow2.asm" name="asm-tree">
-			<revision name="5.0.4" status="release" pubdate="20150515160500" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="9">
-				<metadata-artifact status="successful" details="" size="2083" time="171" location="/home/dse/.ivy2/cache/org.ow2.asm/asm-tree/ivy-5.0.4.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.ow2.asm/asm-tree/ivy-5.0.4.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/ow2/asm/asm-tree/5.0.4/asm-tree-5.0.4.pom"/>
+			<revision name="5.0.4" status="release" pubdate="20150515160500" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="9">
+				<metadata-artifact status="no" details="" size="4397" time="0" location="/home/dse/.ivy2/cache/org.ow2.asm/asm-tree/ivy-5.0.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/ow2/asm/asm-tree/5.0.4/asm-tree-5.0.4.pom"/>
 				<caller organisation="org.ow2.asm" name="asm-commons" conf="compile, runtime" rev="5.0.4" rev-constraint-default="5.0.4" rev-constraint-dynamic="5.0.4" callerrev="5.0.4"/>
 				<artifacts>
-					<artifact name="asm-tree" type="jar" ext="jar" status="successful" details="" size="29050" time="184" location="/home/dse/.ivy2/cache/org.ow2.asm/asm-tree/jars/asm-tree-5.0.4.jar">
+					<artifact name="asm-tree" type="jar" ext="jar" status="no" details="" size="29050" time="0" location="/home/dse/.ivy2/cache/org.ow2.asm/asm-tree/jars/asm-tree-5.0.4.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/ow2/asm/asm-tree/5.0.4/asm-tree-5.0.4.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.ow2.asm" name="asm">
-			<revision name="5.0.4" status="release" pubdate="20150515160400" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="7">
-				<metadata-artifact status="successful" details="" size="1935" time="185" location="/home/dse/.ivy2/cache/org.ow2.asm/asm/ivy-5.0.4.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.ow2.asm/asm/ivy-5.0.4.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/ow2/asm/asm/5.0.4/asm-5.0.4.pom"/>
+			<revision name="5.0.4" status="release" pubdate="20150515160400" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="7">
+				<metadata-artifact status="no" details="" size="3758" time="0" location="/home/dse/.ivy2/cache/org.ow2.asm/asm/ivy-5.0.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/ow2/asm/asm/5.0.4/asm-5.0.4.pom"/>
 				<caller organisation="org.pantsbuild" name="jarjar" conf="default, compile, runtime, master" rev="5.0.4" rev-constraint-default="5.0.4" rev-constraint-dynamic="5.0.4" callerrev="1.6.0"/>
 				<caller organisation="org.ow2.asm" name="asm-tree" conf="compile, runtime" rev="5.0.4" rev-constraint-default="5.0.4" rev-constraint-dynamic="5.0.4" callerrev="5.0.4"/>
 				<artifacts>
-					<artifact name="asm" type="jar" ext="jar" status="successful" details="" size="53297" time="233" location="/home/dse/.ivy2/cache/org.ow2.asm/asm/jars/asm-5.0.4.jar">
+					<artifact name="asm" type="jar" ext="jar" status="no" details="" size="53297" time="0" location="/home/dse/.ivy2/cache/org.ow2.asm/asm/jars/asm-5.0.4.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.ant" name="ant">
-			<revision name="1.9.6" status="release" pubdate="20150629062500" resolver="jcenter" artresolver="jcenter" homepage="http://ant.apache.org/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="5">
-				<metadata-artifact status="successful" details="" size="9625" time="451" location="/home/dse/.ivy2/cache/org.apache.ant/ant/ivy-1.9.6.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.apache.ant/ant/ivy-1.9.6.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/ant/ant/1.9.6/ant-1.9.6.pom"/>
+			<revision name="1.9.6" status="release" pubdate="20150629062500" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://ant.apache.org/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="5">
+				<metadata-artifact status="no" details="" size="2958" time="0" location="/home/dse/.ivy2/cache/org.apache.ant/ant/ivy-1.9.6.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/ant/ant/1.9.6/ant-1.9.6.pom"/>
 				<caller organisation="org.pantsbuild" name="jarjar" conf="default, compile, runtime, master" rev="1.9.6" rev-constraint-default="1.9.6" rev-constraint-dynamic="1.9.6" callerrev="1.6.0"/>
 				<artifacts>
-					<artifact name="ant" type="jar" ext="jar" status="successful" details="" size="2029794" time="987" location="/home/dse/.ivy2/cache/org.apache.ant/ant/jars/ant-1.9.6.jar">
+					<artifact name="ant" type="jar" ext="jar" status="no" details="" size="2029794" time="0" location="/home/dse/.ivy2/cache/org.apache.ant/ant/jars/ant-1.9.6.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/ant/ant/1.9.6/ant-1.9.6.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.ant" name="ant-launcher">
-			<revision name="1.9.6" status="release" pubdate="20150629063700" resolver="jcenter" artresolver="jcenter" homepage="http://ant.apache.org/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="6">
-				<metadata-artifact status="successful" details="" size="2335" time="152" location="/home/dse/.ivy2/cache/org.apache.ant/ant-launcher/ivy-1.9.6.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.apache.ant/ant-launcher/ivy-1.9.6.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6.pom"/>
+			<revision name="1.9.6" status="release" pubdate="20150629063700" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://ant.apache.org/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="6">
+				<metadata-artifact status="no" details="" size="2542" time="0" location="/home/dse/.ivy2/cache/org.apache.ant/ant-launcher/ivy-1.9.6.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6.pom"/>
 				<caller organisation="org.apache.ant" name="ant" conf="compile, runtime" rev="1.9.6" rev-constraint-default="1.9.6" rev-constraint-dynamic="1.9.6" callerrev="1.9.6"/>
 				<artifacts>
-					<artifact name="ant-launcher" type="jar" ext="jar" status="successful" details="" size="18392" time="205" location="/home/dse/.ivy2/cache/org.apache.ant/ant-launcher/jars/ant-launcher-1.9.6.jar">
+					<artifact name="ant-launcher" type="jar" ext="jar" status="no" details="" size="18392" time="0" location="/home/dse/.ivy2/cache/org.apache.ant/ant-launcher/jars/ant-launcher-1.9.6.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.scalactic" name="scalactic_2.10">
-			<revision name="2.2.1" status="release" pubdate="20140801110900" resolver="jcenter" artresolver="jcenter" homepage="http://www.scalatest.org" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+			<revision name="2.2.1" status="release" pubdate="20140801110900" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="2445" time="151" location="/home/dse/.ivy2/cache/org.scalactic/scalactic_2.10/ivy-2.2.1.xml" searched="true" original-local-location="/home/dse/.ivy2/cache/org.scalactic/scalactic_2.10/ivy-2.2.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.pom"/>
+				<metadata-artifact status="no" details="" size="2940" time="0" location="/home/dse/.ivy2/cache/org.scalactic/scalactic_2.10/ivy-2.2.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.pom"/>
 				<caller organisation="com.eed3si9n" name="sbt-assembly" conf="compile" rev="2.2.1" rev-constraint-default="2.2.1" rev-constraint-dynamic="2.2.1" callerrev="0.14.2"/>
 				<artifacts>
-					<artifact name="scalactic_2.10" type="bundle" ext="jar" status="successful" details="" size="386497" time="523" location="/home/dse/.ivy2/cache/org.scalactic/scalactic_2.10/bundles/scalactic_2.10-2.2.1.jar">
+					<artifact name="scalactic_2.10" type="bundle" ext="jar" status="no" details="" size="386497" time="0" location="/home/dse/.ivy2/cache/org.scalactic/scalactic_2.10/bundles/scalactic_2.10-2.2.1.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scalactic/scalactic_2.10/2.2.1/scalactic_2.10-2.2.1.jar"/>
 					</artifact>
 				</artifacts>

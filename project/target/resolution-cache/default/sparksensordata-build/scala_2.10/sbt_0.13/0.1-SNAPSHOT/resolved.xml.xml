@@ -4,7 +4,7 @@
 		module="sparksensordata-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160608144516"
+		publication="20160608210425"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
