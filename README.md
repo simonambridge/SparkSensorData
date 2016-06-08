@@ -42,8 +42,10 @@ $ sbt package
 
 Start the Spark job - *ignore connection refused errors as the port isnt listening yet.
 ```
-$ dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar -Dspark.cassandra.connection.host=127.0.0.1
+$ dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar
 ```
+dse spark-submit --class SparkIngest ./target/scala-2.10/SparkPortStream-assembly-1.0.jar
+
 In another window:
 
 $ head SensorData2.csv
