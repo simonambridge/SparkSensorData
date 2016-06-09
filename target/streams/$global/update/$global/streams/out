@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3a816fda[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4cb8269d[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.4[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.4 in sbt-chain[0m
@@ -4067,49 +4067,59 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->commons-cli#commons-cli;1.2 [provided->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->commons-cli#commons-cli;1.2 [provided->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->commons-cli#commons-cli;1.2 [provided->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 {provided=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.datastax.spark#spark-cassandra-connector_2.10;1.4.0[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: com.datastax.spark#spark-cassandra-connector_2.10;1.4.0[0m
-[0m[[0mdebug[0m] [0m	found com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 {provided=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/dse/.ivy2/local/com.datastax.spark/spark-cassandra-connector_2.10/1.4.0-M1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1[0m
+[0m[[0mdebug[0m] [0m		tried https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.pom[0m
+[0m[[0mdebug[0m] [0m	jcenter: found md file for com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1[0m
+[0m[[0mdebug[0m] [0m		=> https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.pom (1.4.0-M1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.pom ...[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.pom[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1!spark-cassandra-connector_2.10.pom(pom.original) (192ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/dse/.ivy2/local/com.datastax.spark/spark-cassandra-connector_2.10/1.4.0-M1/jars/spark-cassandra-connector_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.jar[0m
+[0m[[0mdebug[0m] [0m	found com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 in jcenter[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.5[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.5 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.10.5] org.scala-lang#scala-library;2.10.5[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.apache.cassandra#cassandra-clientutil;2.1.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.cassandra#cassandra-clientutil;2.1.5 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.cassandra#cassandra-clientutil;2.1.5[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.cassandra#cassandra-clientutil;2.1.5[0m
 [0m[[0mdebug[0m] [0m	found org.apache.cassandra#cassandra-clientutil;2.1.5 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;16.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->compile][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;16.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving com.datastax.cassandra#cassandra-driver-core;2.1.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.datastax.cassandra#cassandra-driver-core;2.1.5 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.datastax.cassandra#cassandra-driver-core;2.1.5[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: com.datastax.cassandra#cassandra-driver-core;2.1.5[0m
 [0m[[0mdebug[0m] [0m	found com.datastax.cassandra#cassandra-driver-core;2.1.5 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->io.netty#netty;3.9.0.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
@@ -4132,8 +4142,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->compile][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->io.netty#netty;3.9.0.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->io.netty#netty;3.9.0.Final [runtime->compile][0m
@@ -4141,71 +4151,71 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->com.codahale.metrics#metrics-core;3.0.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.joda#joda-convert;1.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.joda#joda-convert;1.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.joda#joda-convert;1.2[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.joda#joda-convert;1.2[0m
 [0m[[0mdebug[0m] [0m	found org.joda#joda-convert;1.2 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving joda-time#joda-time;2.3 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: joda-time#joda-time;2.3 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: joda-time#joda-time;2.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: joda-time#joda-time;2.3[0m
 [0m[[0mdebug[0m] [0m	found joda-time#joda-time;2.3 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving com.twitter#jsr166e;1.1.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.twitter#jsr166e;1.1.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.twitter#jsr166e;1.1.0[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: com.twitter#jsr166e;1.1.0[0m
 [0m[[0mdebug[0m] [0m	found com.twitter#jsr166e;1.1.0 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.10.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.10.5 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.10.5[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-reflect;2.10.5[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.10.5 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.10.5] org.scala-lang#scala-reflect;2.10.5[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.xeiam.xchart#xchart;2.4.3 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.xeiam.xchart#xchart;2.4.3 {provided=[default(compile)]}[0m
@@ -7439,16 +7449,16 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->commons-cli#commons-cli;1.2 [provided->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->commons-cli#commons-cli;1.2 [provided->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->commons-cli#commons-cli;1.2 [provided->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;16.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->io.netty#netty;3.9.0.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
@@ -7459,27 +7469,27 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;16.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->io.netty#netty;3.9.0.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->io.netty#netty;3.9.0.Final [runtime->compile][0m
@@ -7487,21 +7497,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->com.codahale.metrics#metrics-core;3.0.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->compile][0m
@@ -10735,16 +10745,16 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->commons-cli#commons-cli;1.2 [provided->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->commons-cli#commons-cli;1.2 [provided->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->commons-cli#commons-cli;1.2 [provided->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;16.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->io.netty#netty;3.9.0.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
@@ -10755,27 +10765,27 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.cassandra#cassandra-clientutil;2.1.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;16.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.datastax.cassandra#cassandra-driver-core;2.1.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.guava#guava;14.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->io.netty#netty;3.9.0.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->io.netty#netty;3.9.0.Final [runtime->compile][0m
@@ -10783,21 +10793,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.cassandra#cassandra-driver-core;2.1.5->com.codahale.metrics#metrics-core;3.0.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-core;3.0.2->org.slf4j#slf4j-api;1.7.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.apache.commons#commons-lang3;3.3.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.google.guava#guava;14.0.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.joda#joda-convert;1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->joda-time#joda-time;2.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->com.twitter#jsr166e;1.1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0->org.scala-lang#scala-reflect;2.10.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.apache.commons#commons-lang3;3.3.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.google.guava#guava;14.0.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.joda#joda-convert;1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->joda-time#joda-time;2.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->com.twitter#jsr166e;1.1.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1->org.scala-lang#scala-reflect;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0 [provided->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1 [provided->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->compile][0m
@@ -10872,7 +10882,12 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.code.gson#gson;2.3!gson.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.twitter4j#twitter4j-core;3.0.3!twitter4j-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] commons-cli#commons-cli;1.2!commons-cli.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.datastax.spark#spark-cassandra-connector_2.10;1.4.0!spark-cassandra-connector_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.jar ...[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.jar[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://jcenter.bintray.com/com/datastax/spark/spark-cassandra-connector_2.10/1.4.0-M1/spark-cassandra-connector_2.10-1.4.0-M1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.datastax.spark#spark-cassandra-connector_2.10;1.4.0-M1!spark-cassandra-connector_2.10.jar (1575ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.xeiam.xchart#xchart;2.4.3!xchart.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.twitter#chill_2.10;0.5.0!chill_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.twitter#chill-java;0.5.0!chill-java.jar[0m
@@ -11026,7 +11041,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1!VectorGraphics2D.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3339ms :: artifacts dl 79ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4495ms :: artifacts dl 1642ms[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 compile produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 runtime produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 test produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-test.xml[0m
@@ -11040,5 +11055,5 @@
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 docs produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 pom produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 scala-tool produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3339ms resolve - 79ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (4495ms resolve - 1642ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -8,9 +8,9 @@ organization := "datastax.com"
 
 libraryDependencies += "org.apache.logging.log4j" % "log4j-core" % "2.6" % "provided"
 
-libraryDependencies += "org.apache.spark" %% "spark-core" % "1.4.0" % "provided"
+libraryDependencies += "org.apache.spark" % "spark-core_2.10" % "1.4.0" % "provided"
 
-libraryDependencies += "org.apache.spark" %% "spark-sql" % "1.4.0" % "provided"
+libraryDependencies += "org.apache.spark" % "spark-sql_2.10" % "1.4.0" % "provided"
 
 libraryDependencies += "org.apache.spark" %% "spark-streaming" % "1.4.0" % "provided"
 
@@ -24,7 +24,7 @@ libraryDependencies += "org.twitter4j" % "twitter4j-core" % "3.0.3" % "provided"
 
 libraryDependencies += "commons-cli" % "commons-cli" % "1.2" % "provided"
 
-libraryDependencies += "com.datastax.spark" % "spark-cassandra-connector_2.10" % "1.4.0" % "provided"
+libraryDependencies += "com.datastax.spark" % "spark-cassandra-connector_2.10" % "1.4.0-M1" % "provided" 
 
 libraryDependencies += "com.xeiam.xchart" % "xchart" % "2.4.3" % "provided"
 

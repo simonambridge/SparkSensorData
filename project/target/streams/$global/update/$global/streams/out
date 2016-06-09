@@ -2305,7 +2305,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1485ms :: artifacts dl 32ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1075ms :: artifacts dl 35ms[0m
 [0m[[0mdebug[0m] [0m	report for default#sparksensordata-build;0.1-SNAPSHOT compile produced in /u02/dev/dse_dev/SparkSensorData/project/target/resolution-cache/reports/default-sparksensordata-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#sparksensordata-build;0.1-SNAPSHOT runtime produced in /u02/dev/dse_dev/SparkSensorData/project/target/resolution-cache/reports/default-sparksensordata-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#sparksensordata-build;0.1-SNAPSHOT test produced in /u02/dev/dse_dev/SparkSensorData/project/target/resolution-cache/reports/default-sparksensordata-build-test.xml[0m
@@ -2319,5 +2319,5 @@
 [0m[[0mdebug[0m] [0m	report for default#sparksensordata-build;0.1-SNAPSHOT docs produced in /u02/dev/dse_dev/SparkSensorData/project/target/resolution-cache/reports/default-sparksensordata-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#sparksensordata-build;0.1-SNAPSHOT pom produced in /u02/dev/dse_dev/SparkSensorData/project/target/resolution-cache/reports/default-sparksensordata-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#sparksensordata-build;0.1-SNAPSHOT scala-tool produced in /u02/dev/dse_dev/SparkSensorData/project/target/resolution-cache/reports/default-sparksensordata-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1485ms resolve - 32ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (1075ms resolve - 35ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

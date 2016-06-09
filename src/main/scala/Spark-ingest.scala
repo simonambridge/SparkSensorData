@@ -40,14 +40,14 @@ object SparkIngest {
     }
   }
 
+  case class Record(name:String, time:Date, value:BigDecimal)
+
   def parseMessage(msg:String) : Record = {
     println("parsemessage - data to parse: " + msg)
     val arr = msg.split(",")
     val time = new Date
     return Record(arr(0), time, BigDecimal(arr(1).toFloat))
   }
-
-  case class Record(name:String, time:Date, value:BigDecimal)
 
   /* This is the entry point for the application */
 
@@ -93,9 +93,9 @@ object SparkIngest {
       .set("spark.cores.max", "2")
       .set("spark.executor.memory", "512M")
       .set("spark.cleaner.ttl", "3600") // This setting is specific to Spark Streaming. It set a flush time for old items.
-//      .setMaster("local[2]")
+      .setMaster("local[2]")
       .setJars(Array("./target/scala-2.10/sparkportstream_2.10-1.0.jar"))
-      .setMaster("spark://127.0.0.1:7077")
+//      .setMaster("spark://127.0.0.1:7077")
 //      .setAppName(getClass.getSimpleName)
       .setAppName("DSE Spark Streaming - Ingest Test")
     /*
@@ -109,28 +109,30 @@ object SparkIngest {
     //.set("spark.eventLog.dir", "/var/log/Datastax/log/spark-events")
 
 
+    println("STEP 2: Connect to the Spark cluster...")
     // Connect to the Spark cluster:
     val sc = new SparkContext(conf)
     println("Spark Conf version: " + sc.version)
 
+    println("STEP 3: Create a StreamingContext...")
     // Create a StreamingContext with a SparkConf configuration
     val ssc = new StreamingContext(conf, Seconds(1))
 
-    println("STEP 2: Instantiate the Cassandra connector cc...")
-    lazy val cc = CassandraConnector(conf)
+    println("STEP 4: Instantiate the Cassandra connector cc...")
+    val cc = CassandraConnector(conf)
 
-    println("STEP 3: Creating SparkSensorData schema...")
+    println("STEP 5: Creating SparkSensorData schema...")
     createSchema(cc, cassandraKeyspace, cassandraTable)
 
     // Create a DStream that will connect to serverIP:serverPort
     val lines = ssc.socketTextStream("localhost", 9999)
 
-    println("STEP 4: Parsing incoming data...<ID>,<timestamp>,<value>")
+    println("STEP 6: Parsing incoming data...<ID>,<timestamp>,<value>")
     val Words = lines.flatMap(_.split(","))   // will give two words per row received - ID and value
     val rowToInsert = lines.map(parseMessage) // will give three words per row received - ID, timestamp and value
 
 
-    println("STEP 5: Save to Cassandra..." + Words)
+    println("STEP 7: Save to Cassandra..." + Words)
     rowToInsert.saveToCassandra(cassandraKeyspace, cassandraTable)
 
     ssc.start()
