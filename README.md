@@ -5,6 +5,18 @@ Demonstrate high speed ingestion of sensor data
 
 ##Pre-Requisites
 To setup your environment, you'll need the following resources:
+
+###Install sbt
+sbt is the Scala Build Tool
+
+```
+echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
+sudo apt-get update
+sudo apt-get install sbt
+```
+
+###Install code dependencies
 ```
 http://xeiam.com/xchart-example-code/
 http://slf4j.org/dist/slf4j-1.7.10.tar.gz
@@ -14,6 +26,16 @@ netty-3.9.0-Final.jar
 guava-16.0.1.jar
 metrics-core-3.0.2.jar
 ```
+
+###Useful tool - locate
+```
+apt-get install locate
+```
+Then scan the filesystems for the first time
+```
+updatedb
+```
+
 
 ##Exercise 1
 
