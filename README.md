@@ -28,6 +28,7 @@ metrics-core-3.0.2.jar
 ```
 
 ###Useful tool - locate
+You can use this to easily locate files. I like it.
 ```
 apt-get install locate
 ```
@@ -35,7 +36,10 @@ Then scan the filesystems for the first time
 ```
 updatedb
 ```
-
+Thereafter find any file using e.g.:
+```
+locate <file to find>
+```
 
 ##Exercise 1
 
@@ -51,7 +55,7 @@ $ pwd
 ~/SparkSensorData
 ```
 
-Test that you can build the package from the command line using **sbt**:
+In one window check that you can build the package from the command line using **sbt**:
 ```
 $ sbt package
 [info] Loading project definition from /home/dse/Simon-demo/project
@@ -62,86 +66,91 @@ $ sbt package
 [success] Total time: 9 s, completed Mar 21, 2015 2:28:15 PM
 ```
 
-Start the Spark job - *ignore connection refused errors as the port isnt listening yet.
+It's important to do the steps in the right order.
+First we will start netcat - we will choose port 9999 for this. In one of the terminal windows type:
 ```
-$ dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar
+nc -lk localhost 9999
+````
+
+In another terminal windows start the Spark job - * you can ignore any connection refused errors as the port isnt listening yet.
+It takes three parameters 
+- the hostname or IP of the Cassandra host
+- the hostname or IP of the Spark Master node
+- the port to use to stream the data
+
 ```
-dse spark-submit --class SparkIngest ./target/scala-2.10/SparkPortStream-assembly-1.0.jar
+dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar 127.0.0.1 127.0.0.1 9999
+```
+if you dont provide three parameters you'll get an error before exiting:
+```
+Error - one or more missing parameters
+Usage is:
+dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar <cassandraHost> <sparkMasterHost> <data port>
+```
 
-In another window:
+In the third window start cqlsh and see the records in the sparsensordata.sensordata table:
+```
+cqlsh `hostname`
+```
 
-$ head SensorData2.csv
-p100,1
-p100,2
-p100,3
-p100,4
-p100,5
-p100,6
-p100,7
+Now go back to the second window (netcat) and type in some comma separated pairs of data e.g.
+```
+nc -lk localhost 9999
+1,2
+1,3
+1,4
+1,999
+```
+**NB** if you do not use commas you will generate an ```java.lang.ArrayIndexOutOfBoundsException``` error and the Spark job will fail.
 
-1. Test 1 - Slow-speed test....
-
-Push records in at 1 per second (or run push.sh):
-
-$ for i in `cat SensorData2.csv` 
-do
-echo $i | nc -l 9999
-sleep 1
-done
-
-In another window:
-
-cqlsh> use demo;
-
-cqlsh:demo> select * from sensor_data;
+In the cqlsh window you should see your data arriving in the sensordata table:
+```
+cqlsh:sparksensordata> select * from sparksensordata.sensordata ;
 
  name | time                     | value
 ------+--------------------------+-------
- p100 | 2015-03-21 17:04:29+0000 |   1.0
- p100 | 2015-03-21 17:04:29+0000 |   2.0
- p100 | 2015-03-21 17:04:29+0000 |   3.0
- p100 | 2015-03-21 17:04:29+0000 |   4.0
- p100 | 2015-03-21 17:04:29+0000 |   5.0
- p100 | 2015-03-21 17:04:29+0000 |   6.0
- p100 | 2015-03-21 17:04:29+0000 |   7.0
- p100 | 2015-03-21 17:04:29+0000 |   8.0
- p100 | 2015-03-21 17:04:29+0000 |   9.0
- p100 | 2015-03-21 17:04:29+0000 |  10.0
- p100 | 2015-03-21 17:04:29+0000 |  11.0
- p100 | 2015-03-21 17:04:29+0000 |  12.0
- p100 | 2015-03-21 17:04:29+0000 |  13.0
- p100 | 2015-03-21 17:04:29+0000 |  14.0
- p100 | 2015-03-21 17:04:29+0000 |  15.0
- p100 | 2015-03-21 17:04:29+0000 |  16.0
- p100 | 2015-03-21 17:04:29+0000 |  17.0
+    1 | 2016-06-10 13:08:52+0000 |   2.0
+    1 | 2016-06-10 13:08:52+0000 |   3.0
+    1 | 2016-06-10 13:08:52+0000 |   4.0
+    1 | 2016-06-10 13:08:57+0000 | 999.0
 
+(4 rows)
+```
 
-
-2. Test 2 - High-speed test....
-
-$ cat SensorData2.csv | nc -l 9999
-
-NB 10% records dropped at 150/sec
+You can also push the contents of the csv file (150 records) to the port before starting the Spark job:
+```
+cat SensorData2.csv | nc -lk localhost 9999
+```
+Then run the Spark job and see how many records there are in Cassandra - about 35 to 40?
 
 
 Phase 2.
 ========
-Java data generator netCat.java:
+For this exercise we'll use a Java data generator netCat.java:
 
-$ cd /home/dse/Simon-demo/src/main/java
-$ javac netCat.java
-$ java netCat <Data type: l|nl> <Sample rate in ms> <Number of Samples>
-e.g.
-$ java netCat l 500 1000 (= 1000 linear samples @ 2 per second)
+Navigate to the source directory and compile the netCat.java source file:
+```
+cd ./src/main/java
+javac netCat.java
+```
+netCat takes three parameters:
+- data type - linear or non-linear
+- sample rate in ms
+- number of samples
+
+For example neCat will send 1000 linear samples @ 2 per second (1 per 500ms)
+```
+$ java netCat l 500 1000 
 p100,1
 p100,2
 p100,3
 p100,4
 p100,5
 p100,6
-
-or
-$ java netCat n 20 1000 (= 1000 non-linear samples @ 50 per second) 
+```
+In this example netCat will send 1000 non-linear samples @ 50 per second (1 per 20ms)
+```
+$ java netCat n 20 1000
 p100,0.9714263278601847
 p100,0.3364444649925371
 p100,0.6484636848309043
@@ -150,21 +159,52 @@ p100,1.599807138977728
 p100,1.5585592457603932
 p100,3.9639281226659615
 p100,5.161374045313633
+```
 
-(netCat will sit there until something else listens on the port)
 
-Then, to test it open another terminal: 
-$ nc localhost 9999 - data will appear
+First we can test netCat. In one terminal window type one of the examples above:
+```
+java netCat n 20 1000
+*****************************************
+Data sample type: Non-linear
+Data sample rate: 20ms
+Data sample count: 1000
+*****************************************
+Waiting for listener........
+```
+netCat now waits for a listener on the port to receive the streamed data.
+
+In another terminal window use nc to listen for output: 
+```
+$ nc localhost 9999
+```
 
 Data appears in both windows.
+```
+p100,0.06769868828261028
+p100,1.1106579192248016
+p100,0.933662716664309
+p100,3.489371007397343
+p100,3.7282250967333344
+p100,5.281761403281172
+p100,4.822815663629292
+p100,1.305075478974862
+p100,1.5396150741347898
+```
 
-To use it:
-Start netCat as shown above
+Now lets use it with Spark streaming
+
+Start netCat as shown above:
+```
+java netCat n 20 1000
+```
+
 Start the Spark streaming job:
-$ cd /home/dse/Simon-demo
-$ dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar -Dspark.cassandra.connection.host=127.0.0.1
-
-Check records appearing in the table.
+```
+dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar 127.0.0.1 127.0.0.1 9999
+```
+Check records appearing in the table:
+```
 cqlsh:demo> select * from sensor_data;
 
  name | time                     | value
@@ -179,7 +219,7 @@ cqlsh:demo> select * from sensor_data;
  p100 | 2015-03-23 11:37:44+0000 |  5.161374092102051
  p100 | 2015-03-23 11:37:44+0000 | 3.0495009422302246
  p100 | 2015-03-23 11:37:45+0000 | 0.3547881245613098
-
+```
 
 Graphing
 ========
