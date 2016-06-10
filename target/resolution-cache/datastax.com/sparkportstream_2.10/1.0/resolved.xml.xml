@@ -4,7 +4,7 @@
 		module="sparkportstream_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20160608231652"
+		publication="20160609215555"
 	>
 		<description>
 		SparkPortStream
@@ -43,7 +43,7 @@
 		<dependency org="com.google.code.gson" name="gson" rev="2.3" conf="provided->default(compile)"/>
 		<dependency org="org.twitter4j" name="twitter4j-core" rev="3.0.3" conf="provided->default(compile)"/>
 		<dependency org="commons-cli" name="commons-cli" rev="1.2" conf="provided->default(compile)"/>
-		<dependency org="com.datastax.spark" name="spark-cassandra-connector_2.10" rev="1.4.0-M1" conf="provided->default(compile)"/>
+		<dependency org="com.datastax.spark" name="spark-cassandra-connector_2.10" rev="1.4.1" conf="provided->default(compile)"/>
 		<dependency org="com.xeiam.xchart" name="xchart" rev="2.4.3" conf="provided->default(compile)"/>
 	</dependencies>
 </ivy-module>

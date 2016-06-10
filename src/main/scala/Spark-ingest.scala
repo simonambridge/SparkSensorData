@@ -1,5 +1,5 @@
-	/*
-	 * Licensed to the Apache Software Foundation (ASF) under one or more
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
@@ -43,7 +43,6 @@ object SparkIngest {
   case class Record(name:String, time:Date, value:BigDecimal)
 
   def parseMessage(msg:String) : Record = {
-    println("parsemessage - data to parse: " + msg)
     val arr = msg.split(",")
     val time = new Date
     return Record(arr(0), time, BigDecimal(arr(1).toFloat))
@@ -69,13 +68,13 @@ object SparkIngest {
      * Configuration reflects running DSE/Spark on a local system. In a production system you
      * would want to modify the host and Master to reflect your installation.
      */
-    val sparkMasterHost = "127.0.0.1"
-    val cassandraHost = "127.0.0.1"
+    val sparkMasterHost = "172.31.8.39"  // node1
+    val cassandraHost = "172.31.9.24"    // node0
     val cassandraKeyspace = "sparksensordata"
     val cassandraTable = "sensordata"
 
-    println("Spark Master Host  = 127.0.0.1")
-    println("Cassandra Host     = 127.0.0.1")
+    println("Spark Master Host  = " + sparkMasterHost)
+    println("Cassandra Host     = " + cassandraHost)
     println("Cassandra Keyspace = " + cassandraKeyspace)
     println("Cassandra Table    = " + cassandraTable)
 
@@ -93,11 +92,12 @@ object SparkIngest {
       .set("spark.cores.max", "2")
       .set("spark.executor.memory", "512M")
       .set("spark.cleaner.ttl", "3600") // This setting is specific to Spark Streaming. It set a flush time for old items.
-      .setMaster("local[2]")
+      .setMaster("spark://" + sparkMasterHost + ":7077")
       .setJars(Array("./target/scala-2.10/sparkportstream_2.10-1.0.jar"))
+      .setAppName("DSE Spark Streaming - Ingest Test")
+//      .setMaster("local[2]")
 //      .setMaster("spark://127.0.0.1:7077")
 //      .setAppName(getClass.getSimpleName)
-      .setAppName("DSE Spark Streaming - Ingest Test")
     /*
        * The next two lines that are commented out can be used to trace the execution of the
        * job using the sparkUI. On a local system, where this code would work, the URL for the
@@ -111,35 +111,34 @@ object SparkIngest {
 
     println("STEP 2: Connect to the Spark cluster...")
     // Connect to the Spark cluster:
-    val sc = new SparkContext(conf)
+    lazy val sc = new SparkContext(conf)
     println("Spark Conf version: " + sc.version)
 
     println("STEP 3: Create a StreamingContext...")
     // Create a StreamingContext with a SparkConf configuration
-    val ssc = new StreamingContext(conf, Seconds(1))
+    val ssc = new StreamingContext(sc, Seconds(1))
 
     println("STEP 4: Instantiate the Cassandra connector cc...")
-    val cc = CassandraConnector(conf)
+    lazy val cc = CassandraConnector(sc.getConf)
 
     println("STEP 5: Creating SparkSensorData schema...")
     createSchema(cc, cassandraKeyspace, cassandraTable)
 
     // Create a DStream that will connect to serverIP:serverPort
-    val lines = ssc.socketTextStream("localhost", 9999)
+    val lines = ssc.socketTextStream("172.31.9.24", 8887)
 
     println("STEP 6: Parsing incoming data...<ID>,<timestamp>,<value>")
     val Words = lines.flatMap(_.split(","))   // will give two words per row received - ID and value
     val rowToInsert = lines.map(parseMessage) // will give three words per row received - ID, timestamp and value
 
 
-    println("STEP 7: Save to Cassandra..." + Words)
+    println("STEP 7: Save to Cassandra...")
     rowToInsert.saveToCassandra(cassandraKeyspace, cassandraTable)
 
-    ssc.start()
     ssc.awaitTermination()
 
   }
-
 }
+
 
 

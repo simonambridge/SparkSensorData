@@ -24,7 +24,7 @@ libraryDependencies += "org.twitter4j" % "twitter4j-core" % "3.0.3" % "provided"
 
 libraryDependencies += "commons-cli" % "commons-cli" % "1.2" % "provided"
 
-libraryDependencies += "com.datastax.spark" % "spark-cassandra-connector_2.10" % "1.4.0-M1" % "provided" 
+libraryDependencies += "com.datastax.spark" % "spark-cassandra-connector_2.10" % "1.4.1" % "provided" 
 
 libraryDependencies += "com.xeiam.xchart" % "xchart" % "2.4.3" % "provided"
 

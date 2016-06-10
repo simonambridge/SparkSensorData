@@ -1,6 +1,6 @@
 for i in `cat SensorData2.csv` 
 do
-echo $i | nc -l 9999
+echo $i | netcat -lk 8887
 # # # 
 sleep 1
 echo $i
