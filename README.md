@@ -3,6 +3,12 @@
 Demonstrate high speed ingestion of sensor data
 -----------------------------------------------
 
+This demo demonstrates how data can be streamed to a Spark receiver listening to a network port.
+The demo coonsists of three parts:
+- netCat       - a data generator written in Java
+- SparkIngest  - written in Scala
+- xchart       - simple way to visualise simple data
+
 ##Pre-Requisites
 To setup your environment, you'll need the following resources:
 
@@ -27,12 +33,12 @@ guava-16.0.1.jar
 metrics-core-3.0.2.jar
 ```
 
-###Useful tool - locate
+###Useful tool - ```locate```
 You can use this to easily locate files. I like it.
 ```
 apt-get install locate
 ```
-Then scan the filesystems for the first time
+Then scan the filesystems for the first time to set up ```locate```.
 ```
 updatedb
 ```
@@ -81,6 +87,24 @@ It takes three parameters
 ```
 dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar 127.0.0.1 127.0.0.1 9999
 ```
+You get some output confirming what's happening:
+```
+Spark Master Host   = 127.0.0.1
+Cassandra Host      = 127.0.0.1
+Streaming data port = 9999
+
+Cassandra Keyspace = sparksensordata
+Cassandra Table    = sensordata
+
+STEP 1: Defining the Cassandra conf object...
+STEP 2: Connect to the Spark cluster...
+Spark Conf version: 1.4.2
+STEP 3: Create a StreamingContext...
+STEP 4: Instantiate the Cassandra connector cc...
+STEP 5: Creating SparkSensorData schema...
+STEP 6: Parsing incoming data...<ID>,<value> and save to Cassandra
+
+```
 if you dont provide three parameters you'll get an error before exiting:
 ```
 Error - one or more missing parameters
@@ -88,15 +112,19 @@ Usage is:
 dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar <cassandraHost> <sparkMasterHost> <data port>
 ```
 
-**NB** You can ignore any connection refused errors like that shown below - this happens when the streaming job isn't receiving any data.
+> **NB** You can ignore any connection refused errors like that shown below - this happens when the streaming job isn't receiving any data.
 ```
 ERROR 2016-06-10 14:49:58,195 org.apache.spark.streaming.scheduler.ReceiverTracker: Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Error connecting to localhost:9999 - java.net.ConnectException: Connection refused
 ```
 
 
-In the third window start cqlsh and see the records in the sparsensordata.sensordata table:
+In a third window start cqlsh:
 ```
 cqlsh `hostname`
+```
+And see the records in the sparsensordata.sensordata table:
+```
+> select * from sparsensordata.sensordata;
 ```
 
 Now go back to the second window (to run netcat) and type in some comma separated pairs of data e.g.
@@ -111,7 +139,7 @@ nc -lk localhost 9999
 
 In the cqlsh window you should see your data arriving in the sensordata table:
 ```
-cqlsh:sparksensordata> select * from sparksensordata.sensordata ;
+> select * from sparksensordata.sensordata ;
 
  name | time                     | value
 ------+--------------------------+-------
@@ -158,6 +186,15 @@ p100,6
 In this example netCat will send 1000 non-linear samples @ 50 per second (1 per 20ms) to port 8080
 ```
 $ java netCat n 20 1000 8080
+*****************************************
+Data sample type: Non-linear
+Data sample rate: 20ms
+Data sample count: 1000
+*****************************************
+Waiting for listener........
+```
+And we would see output like this:
+```
 p100,0.9714263278601847
 p100,0.3364444649925371
 p100,0.6484636848309043
@@ -168,8 +205,11 @@ p100,3.9639281226659615
 p100,5.161374045313633
 ```
 
+OK, lets test it.
 
-First we can test netCat. In one terminal window type one of the examples above:
+First we can test netCat to show how it pushes data to a network port. 
+
+In a terminal window start a netCat run:
 ```
 java netCat n 20 1000 9999
 *****************************************
@@ -179,14 +219,14 @@ Data sample count: 1000
 *****************************************
 Waiting for listener........
 ```
-netCat now waits for a listener on the port to receive the streamed data.
+>**NB** netCat sits and waits for a listener on the port (to receive the streamed data) before it sends anything.
 
 In another terminal window use nc to listen for output: 
 ```
 $ nc localhost 9999
 ```
 
-Data appears in both windows - both the window sending data to the port and in the window where we told nc to listen to the port..
+Data now appears in both windows - in both the window sending data to the port, and in the window where we told nc to listen to the port..
 ```
 p100,0.06769868828261028
 p100,1.1106579192248016
@@ -201,12 +241,12 @@ p100,1.5396150741347898
 
 Now lets use it with Spark streaming...
 
-Start netCat as shown above to send some data - two samples per second:
+Start netCat as shown above to send some data - non-linear (pseudo random) two samples per second:
 ```
-java netCat l 500 1000 9999
+java netCat n 500 1000 9999
 
 *****************************************
-Data sample type: Linear
+Data sample type: Non-linear
 Data sample rate: 500ms
 Data sample count: 500
 *****************************************
@@ -219,6 +259,24 @@ Start the Spark streaming job to stream from the port:
 ```
 dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar 127.0.0.1 127.0.0.1 9999
 ```
+The job output tells you what its doing:
+```
+Spark Master Host   = 127.0.0.1
+Cassandra Host      = 127.0.0.1
+Streaming data port = 9999
+
+Cassandra Keyspace = sparksensordata
+Cassandra Table    = sensordata
+
+STEP 1: Defining the Cassandra conf object...
+STEP 2: Connect to the Spark cluster...
+Spark Conf version: 1.4.2
+STEP 3: Create a StreamingContext...
+STEP 4: Instantiate the Cassandra connector cc...
+STEP 5: Creating SparkSensorData schema...
+STEP 6: Parsing incoming data...<ID>,<value> and save to Cassandra
+```
+
 In the netCat window you should see records being written:
 ```
 p100,1
