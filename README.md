@@ -231,15 +231,17 @@ cqlsh:demo> select * from sensor_data;
 You can run the netCat job again while the Spark job is still running to inject more data into Cassandra.
 
 
-Graphing
-========
-This utility uses the Datastax Cassandra driver and xChart graph libraries.
+##Graphing
 
-$ cd /home/dse/Simon-demo/src/main/java
-
-$ javac -cp .:/home/dse/Datastax/cassandra-java-driver-2.0.2/cassandra-driver-core-2.0.2.jar:/home/dse/xchart-2.4.3/xchart-2.4.3.jar casChart.java
-
-$ java -cp .:/home/dse/slf4j/slf4j-1.7.10/slf4j-api-1.7.10.jar:/Software/Datastax/netty-3.9.0.Final.jar:/Software/Datastax/guava-16.0.1.jar:/Softwe/Datastax/metrics-core-3.0.2.jar:/home/dse/Datastax/cassandra-java-driver-2.0.2/cassandra-driver-core-2.0.2.jar:/home/dse/xchart-2.4.3/xchart-2.4.3.jar casChart
+This example uses the Datastax Cassandra driver and xChart graph libraries. You will also need slf4j, guava and netty.
+```
+$ cd ./src/main/java
+```
+```
+$ javac -cp .:<path to Cassandra driver jars>/cassandra-java-driver-2.0.2/cassandra-driver-core-2.0.2.jar:<path to xchart jars>/xchart-2.4.3/xchart-2.4.3.jar casChart.java
+```
+```
+$ java -cp .:<path to slf4j jars>/slf4j/slf4j-1.7.10/slf4j-api-1.7.10.jar:<path to Netty jars>/netty-3.9.0.Final.jar:<Path to guava jars>/guava-16.0.1.jar:<path to Datastax metrics>/Datastax/metrics-core-3.0.2.jar:<path to Cassandra driver>/cassandra-java-driver-2.0.2/cassandra-driver-core-2.0.2.jar:<path to xchart jars>/xchart-2.4.3/xchart-2.4.3.jar casChart
 
 SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
@@ -250,6 +252,7 @@ Mon Mar 23 11:37:41 GMT 2015, 0.6484636664390564
 Mon Mar 23 11:37:42 GMT 2015, 1.5998071432113647
 Mon Mar 23 11:37:42 GMT 2015, 1.573503017425537
 Mon Mar 23 11:37:43 GMT 2015, 1.5585592985153198
+```
 
 Graphed data will appear in a window.
 
