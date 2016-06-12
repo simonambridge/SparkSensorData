@@ -99,7 +99,7 @@ In the third window start cqlsh and see the records in the sparsensordata.sensor
 cqlsh `hostname`
 ```
 
-Now go back to the second window (netcat) and type in some comma separated pairs of data e.g.
+Now go back to the second window (to run netcat) and type in some comma separated pairs of data e.g.
 ```
 nc -lk localhost 9999
 1,2
@@ -186,7 +186,7 @@ In another terminal window use nc to listen for output:
 $ nc localhost 9999
 ```
 
-Data appears in both windows.
+Data appears in both windows - both the window sending data to the port and in the window where we told nc to listen to the port..
 ```
 p100,0.06769868828261028
 p100,1.1106579192248016
@@ -199,20 +199,39 @@ p100,1.305075478974862
 p100,1.5396150741347898
 ```
 
-Now lets use it with Spark streaming
+Now lets use it with Spark streaming...
 
-Start netCat as shown above:
+Start netCat as shown above to send some data - two samples per second:
 ```
-java netCat n 20 1000 9999
+java netCat l 500 1000 9999
+
+*****************************************
+Data sample type: Linear
+Data sample rate: 500ms
+Data sample count: 500
+*****************************************
+Waiting for listener........
 ```
 
-Start the Spark streaming job:
+Nothing happens until the receiver starts taking data from the port.
+
+Start the Spark streaming job to stream from the port:
 ```
 dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar 127.0.0.1 127.0.0.1 9999
 ```
-Check records appearing in the table:
+In the netCat window you should see records being written:
 ```
-cqlsh:demo> select * from sensor_data;
+p100,1
+p100,2
+p100,3
+p100,4
+p100,5
+p100,6
+```
+
+In cqlsh check that records are being written to the table:
+```
+cqlsh:demo> select * from sensordata;
 
  name | time                     | value
 ------+--------------------------+--------------------
