@@ -37,22 +37,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="netCat.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="netCat.java" pinned="false" current-in-tab="true">
         <entry file="file:///u02/dev/dse_dev/SparkSensorData/src/main/java/netCat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="59" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.5206391">
+              <caret line="68" column="104" selection-start-line="68" selection-start-column="104" selection-end-line="68" selection-end-column="104" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="casChart.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="casChart.java" pinned="false" current-in-tab="false">
         <entry file="file:///u02/dev/dse_dev/SparkSensorData/src/main/java/casChart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09454061">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="8.172414">
+              <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1224#1230#0" expanded="true" />
+                <element signature="e#1272#1280#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,8 +72,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="/u02/dev/dse_dev/SparkSensorData/src/main/scala/Spark-ingest.scala" />
-        <option value="/u02/dev/dse_dev/SparkSensorData/src/main/java/netCat.java" />
         <option value="/u02/dev/dse_dev/SparkSensorData/src/main/java/casChart.java" />
+        <option value="/u02/dev/dse_dev/SparkSensorData/src/main/java/netCat.java" />
       </list>
     </option>
   </component>
@@ -112,7 +116,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -205,15 +208,16 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.31349206" />
-    <property name="last_opened_file_path" value="$USER_HOME$/.ivy2/cache/com.datastax.spark/spark-cassandra-connector_2.10/jars/spark-cassandra-connector_2.10-1.4.1.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/xchart-3.0.4" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -221,7 +225,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
   </component>
-  <component name="RunManager" selected="Application.SparkIngest">
+  <component name="RunManager" selected="Application.casChart">
     <configuration default="false" name="SparkIngest" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="SparkIngest" />
@@ -230,6 +234,21 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="sparksensordata" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="casChart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="casChart" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -445,12 +464,14 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.SparkIngest" />
+      <item index="1" class="java.lang.String" itemvalue="Application.casChart" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.SparkIngest" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.casChart" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SparkIngest" />
       </list>
     </recent_temporary>
   </component>
@@ -564,18 +585,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///u02/dev/dse_dev/SparkSensorData/src/main/java/netCat.java">
+    <entry file="file:///u02/dev/dse_dev/SparkSensorData/src/main/java/casChart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="59" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
-          <folding />
+        <state vertical-scroll-proportion="8.172414">
+          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1224#1230#0" expanded="true" />
+            <element signature="e#1272#1280#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///u02/dev/dse_dev/SparkSensorData/src/main/java/casChart.java">
+    <entry file="file:///u02/dev/dse_dev/SparkSensorData/src/main/java/netCat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09454061">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5206391">
+          <caret line="68" column="104" selection-start-line="68" selection-start-column="104" selection-end-line="68" selection-end-column="104" />
           <folding />
         </state>
       </provider>
@@ -657,7 +682,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>com.datastax.cassandra:cassandra-driver-dse:2.1.0</last-edited>
+          <last-edited>org.knowm.xchart:xchart:3.0.4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

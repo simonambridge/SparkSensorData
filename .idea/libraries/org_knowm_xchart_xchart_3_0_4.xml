@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="org.knowm.xchart:xchart:3.0.4" type="repository">
+    <properties maven-id="org.knowm.xchart:xchart:3.0.4" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/de/erichseifert/vectorgraphics2d/VectorGraphics2D/0.10/VectorGraphics2D-0.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

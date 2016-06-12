@@ -66,7 +66,7 @@ public class netCat {
           value = String.valueOf(i);  // linear data using counter             
         }
         else {
-          value = String.valueOf(new Double(Math.random() * i)); // Non-linear data
+          value = String.valueOf(new Double(Math.random() * i) - (new Double(Math.random() - 0.25) * i)); // Non-linear data
         }
 
         sensorData = sensorID + "," + value + System.getProperty("line.separator");

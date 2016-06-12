@@ -4,7 +4,7 @@
 		module="sparkportstream_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20160610132848"
+		publication="20160612212955"
 	>
 		<description>
 		SparkPortStream
@@ -44,6 +44,10 @@
 		<dependency org="org.twitter4j" name="twitter4j-core" rev="3.0.3" conf="provided->default(compile)"/>
 		<dependency org="commons-cli" name="commons-cli" rev="1.2" conf="provided->default(compile)"/>
 		<dependency org="com.datastax.spark" name="spark-cassandra-connector_2.10" rev="1.4.1" conf="provided->default(compile)"/>
-		<dependency org="com.xeiam.xchart" name="xchart" rev="2.4.3" conf="provided->default(compile)"/>
+		<dependency org="org.knowm.xchart" name="xchart" rev="3.0.4" conf="compile->default(compile)">
+			<artifact name="xchart" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="xchart" type="jar" ext="jar" conf="*"/>
+			<exclude org="de.erichseifert.vectorgraphics2d" module="VectorGraphics2D" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
 	</dependencies>
 </ivy-module>

@@ -61,7 +61,6 @@
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.twitter:parquet-hadoop:1.6.0rc3:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.twitter:parquet-jackson:1.6.0rc3:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.typesafe:config:1.2.1:jar" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: com.xeiam.xchart:xchart:2.4.3:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: commons-beanutils:commons-beanutils:1.7.0:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: commons-beanutils:commons-beanutils-core:1.8.0:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: commons-cli:commons-cli:1.2:jar" level="project" />
@@ -180,5 +179,6 @@
     <orderEntry type="library" scope="PROVIDED" name="SBT: stax:stax-api:1.0.1:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: xmlenc:xmlenc:0.52:jar" level="project" />
     <orderEntry type="library" name="com.datastax.cassandra:cassandra-driver-dse:2.1.0" level="project" />
+    <orderEntry type="library" name="org.knowm.xchart:xchart:3.0.4" level="project" />
   </component>
 </module>

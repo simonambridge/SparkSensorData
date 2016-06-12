@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2d23e9e[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4fb73c1d[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.4[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.4 in sbt-chain[0m
@@ -15,6 +15,48 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.knowm.xchart#xchart;3.0.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.knowm.xchart#xchart;3.0.4 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/dse/.ivy2/local/org.knowm.xchart/xchart/3.0.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.knowm.xchart#xchart;3.0.4[0m
+[0m[[0mdebug[0m] [0m		tried https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.pom[0m
+[0m[[0mdebug[0m] [0m	jcenter: found md file for org.knowm.xchart#xchart;3.0.4[0m
+[0m[[0mdebug[0m] [0m		=> https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.pom (3.0.4)[0m
+[0m[[0mdebug[0m] [0mdownloading https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.pom ...[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.pom[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.knowm.xchart#xchart;3.0.4!xchart.pom(pom.original) (198ms)[0m
+[0m[[0minfo[0m] [0mResolving org.knowm.xchart#xchart-parent;3.0.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.knowm.xchart#xchart-parent;3.0.4 {}[0m
+[0m[[0mdebug[0m] [0m		tried /home/dse/.ivy2/local/org.knowm.xchart/xchart-parent/3.0.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.knowm.xchart#xchart-parent;3.0.4[0m
+[0m[[0mdebug[0m] [0m		tried https://jcenter.bintray.com/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.pom[0m
+[0m[[0mdebug[0m] [0m	jcenter: found md file for org.knowm.xchart#xchart-parent;3.0.4[0m
+[0m[[0mdebug[0m] [0m		=> https://jcenter.bintray.com/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.pom (3.0.4)[0m
+[0m[[0mdebug[0m] [0mdownloading https://jcenter.bintray.com/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.pom ...[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.pom[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://jcenter.bintray.com/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.knowm.xchart#xchart-parent;3.0.4!xchart-parent.pom(pom.original) (193ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/dse/.ivy2/local/org.knowm.xchart/xchart-parent/3.0.4/jars/xchart-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://jcenter.bintray.com/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://jcenter.bintray.com/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.akka.io/releases/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.akka.io/releases/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://mvn.erichseifert.de/maven2/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://mvn.erichseifert.de/maven2/org/knowm/xchart/xchart-parent/3.0.4/xchart-parent-3.0.4.jar[0m
+[0m[[0mdebug[0m] [0m		tried /home/dse/.ivy2/local/org.knowm.xchart/xchart/3.0.4/jars/xchart.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.jar[0m
+[0m[[0mdebug[0m] [0m	found org.knowm.xchart#xchart;3.0.4 in jcenter[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [compile][0m
@@ -22,6 +64,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [runtime][0m
@@ -30,6 +78,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'provided'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [provided][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.apache.logging.log4j#log4j-core;2.6 [provided->default(compile)][0m
@@ -4252,26 +4306,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.1->org.scala-lang#scala-reflect;2.10.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.datastax.spark#spark-cassandra-connector_2.10;1.4.1->org.scala-lang#scala-reflect;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.1 [provided->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving com.xeiam.xchart#xchart;2.4.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.xeiam.xchart#xchart;2.4.3 {provided=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.xeiam.xchart#xchart;2.4.3[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: com.xeiam.xchart#xchart;2.4.3[0m
-[0m[[0mdebug[0m] [0m	found com.xeiam.xchart#xchart;2.4.3 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1[0m
-[0m[[0mdebug[0m] [0m	found de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'optional'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile-internal'[0m
@@ -4281,6 +4315,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [provided][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.apache.logging.log4j#log4j-core;2.6 [provided->default(compile)][0m
@@ -7576,14 +7616,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.1 [provided->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [runtime-internal][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [runtime][0m
@@ -7592,6 +7624,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [test-internal][0m
@@ -7602,6 +7640,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.10 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.knowm.xchart#xchart;3.0.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [provided][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->org.apache.logging.log4j#log4j-core;2.6 [provided->default(compile)][0m
@@ -10900,14 +10944,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.datastax.spark#spark-cassandra-connector_2.10;1.4.1 [provided->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.xeiam.xchart#xchart;2.4.3->de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies datastax.com#sparkportstream_2.10;1.0->com.xeiam.xchart#xchart;2.4.3 [provided->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'plugin'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for datastax.com#sparkportstream_2.10;1.0 [plugin][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'sources'[0m
@@ -10965,6 +11001,18 @@
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4-sources.jar[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.knowm.xchart#xchart;3.0.4!xchart.jar(src) (248ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.jar ...[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.jar[0m
+[0m[[0mdebug[0m] [0m	jcenter: downloading https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://jcenter.bintray.com/org/knowm/xchart/xchart/3.0.4/xchart-3.0.4.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.knowm.xchart#xchart;3.0.4!xchart.jar (203ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.logging.log4j#log4j-core;2.6!log4j-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.spark#spark-core_2.10;1.4.0!spark-core_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.spark#spark-sql_2.10;1.4.0!spark-sql_2.10.jar[0m
@@ -10975,7 +11023,6 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.twitter4j#twitter4j-core;3.0.3!twitter4j-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] commons-cli#commons-cli;1.2!commons-cli.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.datastax.spark#spark-cassandra-connector_2.10;1.4.1!spark-cassandra-connector_2.10.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.xeiam.xchart#xchart;2.4.3!xchart.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.twitter#chill_2.10;0.5.0!chill_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.twitter#chill-java;0.5.0!chill-java.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.hadoop#hadoop-client;2.2.0!hadoop-client.jar[0m
@@ -11130,10 +11177,9 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-transport;4.0.27.Final!netty-transport.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-codec;4.0.27.Final!netty-codec.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-common;4.0.27.Final!netty-common.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] de.erichseifert.vectorgraphics2d#VectorGraphics2D;0.9.1!VectorGraphics2D.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2513ms :: artifacts dl 51ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 7800ms :: artifacts dl 531ms[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 compile produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 runtime produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 test produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-test.xml[0m
@@ -11147,5 +11193,5 @@
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 docs produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 pom produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for datastax.com#sparkportstream_2.10;1.0 scala-tool produced in /u02/dev/dse_dev/SparkSensorData/target/resolution-cache/reports/datastax.com-sparkportstream_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2513ms resolve - 51ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (7800ms resolve - 531ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -26,7 +26,7 @@ libraryDependencies += "commons-cli" % "commons-cli" % "1.2" % "provided"
 
 libraryDependencies += "com.datastax.spark" % "spark-cassandra-connector_2.10" % "1.4.1" % "provided" 
 
-libraryDependencies += "com.xeiam.xchart" % "xchart" % "2.4.3" % "provided"
+libraryDependencies += "org.knowm.xchart" % "xchart" % "3.0.4" exclude("de.erichseifert.vectorgraphics2d", "VectorGraphics2D") withSources()
 
 resolvers += "Akka Repository" at "http://repo.akka.io/releases/"
 

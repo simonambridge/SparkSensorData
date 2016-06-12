@@ -7,31 +7,8 @@
 		revision="1.0"
 		conf="provided"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160610132848"/>
+		date="20160612212955"/>
 	<dependencies>
-		<module organisation="com.xeiam.xchart" name="xchart">
-			<revision name="2.4.3" status="release" pubdate="20150109103127" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="162">
-				<metadata-artifact status="no" details="" size="3600" time="0" location="/home/dse/.ivy2/cache/com.xeiam.xchart/xchart/ivy-2.4.3.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/xeiam/xchart/xchart/2.4.3/xchart-2.4.3.pom"/>
-				<caller organisation="datastax.com" name="sparkportstream_2.10" conf="provided" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="1.0"/>
-				<artifacts>
-					<artifact name="xchart" type="jar" ext="jar" status="no" details="" size="118093" time="0" location="/home/dse/.ivy2/cache/com.xeiam.xchart/xchart/jars/xchart-2.4.3.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/xeiam/xchart/xchart/2.4.3/xchart-2.4.3.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="de.erichseifert.vectorgraphics2d" name="VectorGraphics2D">
-			<revision name="0.9.1" status="release" pubdate="20130531161656" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="163">
-				<license name="GNU Library or Lesser General Public License (LGPL)" url="http://www.gnu.org/licenses/lgpl.txt"/>
-				<metadata-artifact status="no" details="" size="3093" time="0" location="/home/dse/.ivy2/cache/de.erichseifert.vectorgraphics2d/VectorGraphics2D/ivy-0.9.1.xml" searched="false" origin-is-local="false" origin-location="http://mvn.erichseifert.de/maven2/de/erichseifert/vectorgraphics2d/VectorGraphics2D/0.9.1/VectorGraphics2D-0.9.1.pom"/>
-				<caller organisation="com.xeiam.xchart" name="xchart" conf="default, compile, runtime, master" rev="0.9.1" rev-constraint-default="0.9.1" rev-constraint-dynamic="0.9.1" callerrev="2.4.3"/>
-				<artifacts>
-					<artifact name="VectorGraphics2D" type="jar" ext="jar" status="no" details="" size="28894" time="0" location="/home/dse/.ivy2/cache/de.erichseifert.vectorgraphics2d/VectorGraphics2D/jars/VectorGraphics2D-0.9.1.jar">
-						<origin-location is-local="false" location="http://mvn.erichseifert.de/maven2/de/erichseifert/vectorgraphics2d/VectorGraphics2D/0.9.1/VectorGraphics2D-0.9.1.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
 		<module organisation="com.datastax.spark" name="spark-cassandra-connector_2.10">
 			<revision name="1.4.1" status="release" pubdate="20151202081130" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/datastax/spark-cassandra-connector" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="148">
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
