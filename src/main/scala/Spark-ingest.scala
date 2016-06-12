@@ -52,12 +52,20 @@ object SparkIngest {
 
   def main(args: Array[String]) {
 
-    // Check how many arguments were passed in - none required
-    if (args.length >0) {
-      System.out.println("No parameters required")
-      // System.exit(0);
+    // Check how many arguments were passed in - must be three
+    // Cassandra must be running in order to submit a job - otherwise you will get
+    // java.io.IOException: Failed to open thrift connection to Cassandra at 127.0.0.1:9160
+    if (args.length <3) {
+      System.out.println("Error - one or more missing parameters")
+      System.out.println("Usage is:")
+      System.out.println("dse spark-submit --class SparkIngest " +
+        "./target/scala-2.10/sparkportstream_2.10-1.0.jar <cassandraHost> <sparkMasterHost> <data port>");
+      System.exit(0);
     }
 
+    val cassandraHost: String = args(0) // (scala doesn't like args[0])
+    val sparkMasterHost: String = args(1)
+    val dataPort: Int = args(2).toInt
     /*
      * This next line sets the logger level. If you are having trouble getting this program to work you can change the
      * value from Level.ERROR to LEVEL.WARN or more verbose yet, LEVEL.INFO
@@ -68,15 +76,19 @@ object SparkIngest {
      * Configuration reflects running DSE/Spark on a local system. In a production system you
      * would want to modify the host and Master to reflect your installation.
      */
-    val sparkMasterHost = "172.31.8.39"  // node1
-    val cassandraHost = "172.31.9.24"    // node0
+//    val sparkMasterHost = "172.31.8.39"  // node1
+//    val cassandraHost = "172.31.9.24"    // node0
     val cassandraKeyspace = "sparksensordata"
     val cassandraTable = "sensordata"
 
-    println("Spark Master Host  = " + sparkMasterHost)
-    println("Cassandra Host     = " + cassandraHost)
+    println()
+    println("Spark Master Host   = " + sparkMasterHost)
+    println("Cassandra Host      = " + cassandraHost)
+    println("Streaming data port = " + dataPort)
+    println()
     println("Cassandra Keyspace = " + cassandraKeyspace)
     println("Cassandra Table    = " + cassandraTable)
+    println()
 
     // Tell Spark the address of one Cassandra node:
     /*
@@ -125,16 +137,15 @@ object SparkIngest {
     createSchema(cc, cassandraKeyspace, cassandraTable)
 
     // Create a DStream that will connect to serverIP:serverPort
-    val lines = ssc.socketTextStream("172.31.9.24", 8887)
+    val lines = ssc.socketTextStream("localhost", dataPort)
 
-    println("STEP 6: Parsing incoming data...<ID>,<timestamp>,<value>")
+    println("STEP 6: Parsing incoming data...<ID>,<value> and save to Cassandra")
     val Words = lines.flatMap(_.split(","))   // will give two words per row received - ID and value
     val rowToInsert = lines.map(parseMessage) // will give three words per row received - ID, timestamp and value
 
-
-    println("STEP 7: Save to Cassandra...")
     rowToInsert.saveToCassandra(cassandraKeyspace, cassandraTable)
 
+    ssc.start()
     ssc.awaitTermination()
 
   }

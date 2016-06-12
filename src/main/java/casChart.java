@@ -1,4 +1,7 @@
 import com.xeiam.xchart.Chart;
+import com.xeiam.xchart.ChartBuilder;
+import com.xeiam.xchart.StyleManager;
+
 import com.xeiam.xchart.QuickChart;
 import com.xeiam.xchart.SwingWrapper;
 import com.xeiam.xchart.*;
@@ -28,13 +31,13 @@ public class casChart {
 //	             .withLoadBalancingPolicy(
 //			new TokenAwarePolicy(new DCAwareRoundRobinPolicy()))
 	             .build();
-    session = cluster.connect("demo");
+    session = cluster.connect("sparksensordata");
 
     Collection<Date> xData = new ArrayList<Date>();
     Collection<BigDecimal> yData = new ArrayList<BigDecimal>();
 
     // Get record count
-    results = session.execute("SELECT COUNT(*) FROM sensor_data");
+    results = session.execute("SELECT COUNT(*) FROM sensordata");
 
     for (Row row : results) {
       Long rowCount = row.getLong("Count");
@@ -42,14 +45,14 @@ public class casChart {
 
     Date sdate = null;
 
-    results = session.execute("SELECT time, value FROM sensor_data");
+    results = session.execute("SELECT time, value FROM sensordata");
 
     // Build result set
 
     for (Row row : results) {
       sdate=row.getDate("Time");
       xData.add(sdate);
-System.out.println(sdate + ", " + row.getDecimal("Value"));
+      System.out.println(sdate + ", " + row.getDecimal("Value"));
       yData.add(row.getDecimal("Value"));
     }
 
@@ -65,4 +68,3 @@ System.out.println(sdate + ", " + row.getDecimal("Value"));
     cluster.close();
   }
 }
-

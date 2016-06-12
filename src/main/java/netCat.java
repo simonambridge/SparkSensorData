@@ -13,14 +13,15 @@ public class netCat {
 
 // ---------------validate input parameters -------------------
 
-    if (args.length <3) {
-        System.out.println("Usage: java netCat <Data type: [l|n]> <Sample rate in ms> <Number of Samples>");
+    if (args.length <4) {
+        System.out.println("Usage: java netCat <Data type: [l|n]> <Sample rate in ms> <Number of Samples> <data port>");
         System.exit(0);
     }
 
     String sampleType = args[0];
     int sampleRate = Integer.valueOf(args[1]).intValue();
     int sampleCount = Integer.valueOf(args[2]).intValue();
+    int dataPort = Integer.valueOf(args[3]).intValue();
 
     System.out.println("*****************************************");
     if (sampleType.equals("l")) {
@@ -52,7 +53,7 @@ public class netCat {
 // --------------------------------------------------------------------------------
 
     try {
-      ServerSocket serverSocket = new ServerSocket(9999);
+      ServerSocket serverSocket = new ServerSocket(dataPort);
       Socket clientSocket = serverSocket.accept();
       PrintWriter out =
       new PrintWriter(clientSocket.getOutputStream(), true);
