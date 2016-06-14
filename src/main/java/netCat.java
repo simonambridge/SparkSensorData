@@ -11,11 +11,11 @@ public class netCat {
 
   public static void main(String args[]) {
 
-// ---------------validate input parameters -------------------
+// --------------- check input parameters provided-------------------
 
     if (args.length <4) {
-        System.out.println("Usage: java netCat <Data type: [l|n]> <Sample rate in ms> <Number of Samples> <data port>");
-        System.exit(0);
+      System.out.println("Usage: java netCat <Data type: [l|n]> <Sample rate in ms> <Number of Samples> <data port>");
+      System.exit(0);
     }
 
     String sampleType = args[0];
@@ -24,59 +24,66 @@ public class netCat {
     int dataPort = Integer.valueOf(args[3]).intValue();
 
     System.out.println("*****************************************");
+
+// --------------- check input parameters -------------------
+
     if (sampleType.equals("l")) {
-       System.out.println("Data sample type: Linear"); } 
+      System.out.println("Data sample type: Linear"); }
     else if (sampleType.equals("n")) {
-       System.out.println("Data sample type: Non-linear"); }
+      System.out.println("Data sample type: Non-linear"); }
     else {
-       System.out.println("Invalid data sample type: " + sampleType);
-       return;
-    }
+      System.out.println("Sample type: " + sampleType + " not l or n");
+      return;    }
 
     if (sampleRate<1 || sampleRate>1000) {
-      System.out.println("Invalid data sample rate: " + sampleRate);
-      return; } 
-    else {
-      System.out.println("Data sample rate: " + sampleRate + "ms");
-    }
+      System.out.println("Data sample rate " + sampleRate + " not between 1 and 1000ms");
+      return; }
 
-    if (sampleCount<1 || sampleRate>10000) {
-      System.out.println("Invalid data sample count: " + sampleCount);
-      return; } 
-    else {
-      System.out.println("Data sample count: " + sampleRate);
-    }
+    if (sampleCount<1 || sampleCount>10000) {
+      System.out.println("Sample count " + sampleCount + " not between 1 and 10000 samples");
+      return; }
 
     System.out.println("*****************************************");
-    System.out.println("Waiting for listener........");
+    System.out.println("Waiting for listener on port " + dataPort + "........");
 
-// --------------------------------------------------------------------------------
+// ------------------- send data -----------------------------
 
     try {
       ServerSocket serverSocket = new ServerSocket(dataPort);
       Socket clientSocket = serverSocket.accept();
       PrintWriter out =
-      new PrintWriter(clientSocket.getOutputStream(), true);
-                        
+              new PrintWriter(clientSocket.getOutputStream(), true);
+
+      String value = "";
       int i = 0;
-      while(i<=sampleCount){  // number of samples to send
-        i++;                       
-        
+      Double valueDouble = 0.0;
+
+      while(i<=sampleCount){  // number of samples to send cx c
+        i++;
+
         if (sampleType.equals("l")) {
-          value = String.valueOf(i);  // linear data using counter             
+          valueDouble = (double) i;  // linear data using counter - convert to Double from Int
         }
         else {
-          value = String.valueOf(new Double(Math.random() * i) - (new Double(Math.random() - 0.25) * i)); // Non-linear data
+          if (i==0)
+          { valueDouble = Math.random(); } // if its the first iteration
+          else { valueDouble = valueDouble + Math.random() + .5; };
         }
+        value = String.valueOf(valueDouble);
 
         sensorData = sensorID + "," + value + System.getProperty("line.separator");
         System.out.println(sensorData);
         out.write(sensorData);
         out.flush();
+
         Thread.sleep(sampleRate);  // sample rate per ms
       }
-    } catch (Throwable e) {
-        e.printStackTrace();
-      }
+    }
+
+    catch (Throwable e) {
+      e.printStackTrace();
+    }
   }
+
 }
+
