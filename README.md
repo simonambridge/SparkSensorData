@@ -6,8 +6,8 @@ Demonstrate high speed ingestion of sensor data
 This demo demonstrates how data can be streamed to a Spark receiver listening to a network port.
 The demo coonsists of three parts:
 - netCat       - a data generator written in Java
-- SparkIngest  - written in Scala
-- xchart       - simple way to visualise simple data
+- SparkIngest  - a Spark streaming job written in Scala
+- casChart       - simple way to visualise simple data using in java
 
 ##Pre-Requisites
 To setup your environment, you'll need the following resources:
@@ -33,7 +33,9 @@ guava-16.0.1.jar
 metrics-core-3.0.2.jar
 ```
 
-###Useful tool - ```locate```
+>See ```build.sbt``` for more details.
+
+###Useful Linux tool - ```locate```
 You can use this to easily locate files. I like it.
 ```
 apt-get install locate
@@ -173,19 +175,10 @@ netCat takes four parameters:
 - number of samples
 - streaming port
 
-For example neCat will send 1000 linear samples @ 2 per second (1 per 500ms) to port 9999
+
+In this example netCat will send 1000 non-linear samples @ 10 per second (1 per 100ms) to port 8080
 ```
-$ java netCat l 500 1000 9999
-p100,1
-p100,2
-p100,3
-p100,4
-p100,5
-p100,6
-```
-In this example netCat will send 1000 non-linear samples @ 50 per second (1 per 20ms) to port 8080
-```
-$ java netCat n 20 1000 8080
+$ java netCat n 100 1000 8080
 *****************************************
 Data sample type: Non-linear
 Data sample rate: 20ms
@@ -211,11 +204,11 @@ First we can test netCat to show how it pushes data to a network port.
 
 In a terminal window start a netCat run:
 ```
-java netCat n 20 1000 9999
+java netCat n 20 100 9999
 *****************************************
 Data sample type: Non-linear
 Data sample rate: 20ms
-Data sample count: 1000
+Data sample count: 100
 *****************************************
 Waiting for listener........
 ```
@@ -243,12 +236,12 @@ Now lets use it with Spark streaming...
 
 Start netCat as shown above to send some data - non-linear (pseudo random) two samples per second:
 ```
-java netCat n 500 1000 9999
+java netCat n 500 100 9999
 
 *****************************************
 Data sample type: Non-linear
 Data sample rate: 500ms
-Data sample count: 500
+Data sample count: 100
 *****************************************
 Waiting for listener........
 ```
@@ -279,12 +272,11 @@ STEP 6: Parsing incoming data...<ID>,<value> and save to Cassandra
 
 In the netCat window you should see records being written:
 ```
-p100,1
-p100,2
-p100,3
-p100,4
-p100,5
-p100,6
+p100,1.1106579192248016
+p100,0.933662716664309
+p100,3.489371007397343
+p100,3.7282250967333344
+p100,5.281761403281172
 ```
 
 In cqlsh check that records are being written to the table:
@@ -309,6 +301,8 @@ You can run the netCat job again while the Spark job is still running to inject 
 
 
 ##Graphing
+
+The idea here is just to make a simple way of viewing the data generated and streamed into Cassandra. You could use something like this to build a dashboard.
 
 This example uses the Datastax Cassandra driver and xChart graph libraries. You will also need slf4j, guava and netty.
 ```
