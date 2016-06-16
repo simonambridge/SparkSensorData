@@ -67,7 +67,7 @@ public class netCat {
         else {
           if (i==0)
           { valueDouble = Math.random(); } // if its the first iteration
-          else { valueDouble = valueDouble + Math.random() + .5; };
+          else { valueDouble = valueDouble + Math.random() - .5; };
         }
         value = String.valueOf(valueDouble);
 
