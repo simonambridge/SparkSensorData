@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter/jsr166e/jars/jsr166e-1.1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter/jsr166e/srcs/jsr166e-1.1.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

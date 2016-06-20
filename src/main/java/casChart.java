@@ -54,10 +54,11 @@ public class casChart {
     // Build result set
 
     for (Row row : results) {
-      System.out.println("Adding " + sdate + ", " + row.getDecimal("Value"));
+      System.out.println("Adding " + sdate + ", " + row.getDouble("Value"));
       sdate=row.getDate("Time");
       xData.add(sdate);
-      yData.add(row.getDecimal("Value").doubleValue());
+//      yData.add(row.getDecimal("Value").doubleValue());
+      yData.add(row.getDouble("Value"));
     }
 
 

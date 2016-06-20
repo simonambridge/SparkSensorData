@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparksensordata.iml" filepath="$PROJECT_DIR$/.idea/modules/sparksensordata.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparksensordata-build.iml" filepath="$PROJECT_DIR$/.idea/modules/sparksensordata-build.iml" />
     </modules>
   </component>
 </project>

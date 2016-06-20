@@ -1,4 +1,4 @@
-name := "SparkPortStream"
+name := "SparkSensorData"
 
 version := "1.0"
 
@@ -40,6 +40,7 @@ assemblyMergeStrategy in assembly := {
   case PathList("com", "esotericsoftware", xs @ _*) => MergeStrategy.last
   case PathList("com", "codahale", xs @ _*) => MergeStrategy.last
   case PathList("com", "yammer", xs @ _*) => MergeStrategy.last
+  case PathList("META-INF", "MANIFEST.MF") => MergeStrategy.discard
   case "about.html" => MergeStrategy.rename
   case "META-INF/ECLIPSEF.RSA" => MergeStrategy.last
   case "META-INF/mailcap" => MergeStrategy.last

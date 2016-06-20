@@ -3,7 +3,7 @@ echo "Parameters are: <linear or non-linear (random) l|n > <rate in ms> <number 
 if [[ $# -eq 0 ]] ; then
 	 echo "No parameters supplied"
 	   echo "For a set of 100 random data points every 500ms on port 9999 try:"
-	   echo "./netCat n 500 100 9999"
+	   echo "./netCat_run.sh n 500 100 9999"
 	     exit 1
      fi
 

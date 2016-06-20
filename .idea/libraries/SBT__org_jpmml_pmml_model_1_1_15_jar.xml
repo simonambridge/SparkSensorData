@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/.ivy2/cache/org.jpmml/pmml-model/jars/pmml-model-1.1.15.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.jpmml/pmml-model/srcs/pmml-model-1.1.15-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

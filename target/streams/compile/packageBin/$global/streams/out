@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mPackaging /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/sparkportstream_2.10-1.0.jar ...[0m
+[0m[[0minfo[0m] [0mPackaging /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/sparksensordata_2.10-1.0.jar ...[0m
 [0m[[0mdebug[0m] [0mInput file mappings:[0m
 [0m[[0mdebug[0m] [0m	SparkIngest$Record.class[0m
 [0m[[0mdebug[0m] [0m	  /u02/dev/dse_dev/SparkSensorData/target/scala-2.10/classes/SparkIngest$Record.class[0m

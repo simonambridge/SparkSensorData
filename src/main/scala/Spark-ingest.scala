@@ -36,16 +36,16 @@ object SparkIngest {
       session.execute(s"DROP TABLE IF EXISTS ${keySpaceName}.${tableName};")
 
       session.execute("CREATE TABLE IF NOT EXISTS " +
-        s"${keySpaceName}.${tableName} (name text, time timestamp, value decimal, PRIMARY KEY(name, time));")
+        s"${keySpaceName}.${tableName} (name text, time timestamp, value double, PRIMARY KEY(name, time));")
     }
   }
 
-  case class Record(name:String, time:Date, value:BigDecimal)
+  case class Record(name:String, time:Date, value:Double)
 
   def parseMessage(msg:String) : Record = {
     val arr = msg.split(",")
     val time = new Date
-    return Record(arr(0), time, BigDecimal(arr(1).toFloat))
+    return Record(arr(0), time, arr(1).toFloat)
   }
 
   /* This is the entry point for the application */
@@ -59,7 +59,7 @@ object SparkIngest {
       System.out.println("Error - one or more missing parameters")
       System.out.println("Usage is:")
       System.out.println("dse spark-submit --class SparkIngest " +
-        "./target/scala-2.10/sparkportstream_2.10-1.0.jar <cassandraHost> <sparkMasterHost> <data port>");
+        "./target/scala-2.10/sparksensordata_2.10-1.0.jar <cassandraHost> <sparkMasterHost> <data port>");
       System.exit(0);
     }
 
@@ -105,7 +105,7 @@ object SparkIngest {
       .set("spark.executor.memory", "512M")
       .set("spark.cleaner.ttl", "3600") // This setting is specific to Spark Streaming. It set a flush time for old items.
       .setMaster("spark://" + sparkMasterHost + ":7077")
-      .setJars(Array("./target/scala-2.10/sparkportstream_2.10-1.0.jar"))
+      .setJars(Array("./target/scala-2.10/sparksensordata_2.10-1.0.jar"))
       .setAppName("DSE Spark Streaming - Ingest Test")
 //      .setMaster("local[2]")
 //      .setMaster("spark://127.0.0.1:7077")
