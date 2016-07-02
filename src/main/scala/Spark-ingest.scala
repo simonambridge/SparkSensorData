@@ -36,7 +36,7 @@ object SparkIngest {
       session.execute(s"DROP TABLE IF EXISTS ${keySpaceName}.${tableName};")
 
       session.execute("CREATE TABLE IF NOT EXISTS " +
-        s"${keySpaceName}.${tableName} (name text, time timestamp, value double, PRIMARY KEY(name, time));")
+        s"${keySpaceName}.${tableName} (name text, time timestamp, value double, PRIMARY KEY((name, time)));")
     }
   }
 

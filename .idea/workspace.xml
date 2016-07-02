@@ -637,6 +637,7 @@
       <change type="DELETED" beforePath="/u02/dev/dse_dev/SparkSensorData/submit.sh" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="/u02/dev/dse_dev/SparkSensorData/.idea/workspace.xml" afterPath="/u02/dev/dse_dev/SparkSensorData/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="/u02/dev/dse_dev/SparkSensorData/src/main/scala/Spark-ingest.scala" afterPath="/u02/dev/dse_dev/SparkSensorData/src/main/scala/Spark-ingest.scala" />
     </list>
     <ignored path="SparkSensorData.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -688,8 +689,8 @@
       <file leaf-file-name="Spark-ingest.scala" pinned="false" current-in-tab="true">
         <entry file="file:///u02/dev/dse_dev/SparkSensorData/src/main/scala/Spark-ingest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23076923">
-              <caret line="38" column="93" selection-start-line="38" selection-start-column="93" selection-end-line="38" selection-end-column="93" />
+            <state vertical-scroll-proportion="0.025641026">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1171,12 +1172,12 @@
       <option name="number" value="Default" />
       <updated>1466382694406</updated>
       <workItem from="1467411558874" duration="808000" />
-      <workItem from="1467450586996" duration="1009000" />
+      <workItem from="1467450586996" duration="1870000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1817000" />
+    <option name="totallyTimeSpent" value="2678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1615" height="830" extended-state="6" />
@@ -1301,8 +1302,8 @@
     </entry>
     <entry file="file:///u02/dev/dse_dev/SparkSensorData/src/main/scala/Spark-ingest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23076923">
-          <caret line="38" column="93" selection-start-line="38" selection-start-column="93" selection-end-line="38" selection-end-column="93" />
+        <state vertical-scroll-proportion="0.025641026">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
