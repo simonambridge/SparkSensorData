@@ -75,7 +75,7 @@ $ sbt package
 ```
 
 It's important to do the steps in the right order.
-First we will start netcat - netcat will allow us to send data to a port. We will use port 9999 for this. 
+First we will start the Linux netcat utility - netcat allows us to send data to a port. We will use port 9999 for this. 
 
 In one of the terminal windows type:
 ```
