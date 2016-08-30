@@ -7,7 +7,7 @@ This demo demonstrates how data can be streamed to a Spark receiver listening to
 The demo coonsists of three parts:
 - netCat       - a data generator written in Java
 - SparkIngest  - a Spark streaming job written in Scala
-- casChart       - simple way to visualise simple data using in java
+- casChart     - simple way to visualise simple data using java
 
 ##Pre-Requisites
 To setup your environment, you'll need the following resources:
