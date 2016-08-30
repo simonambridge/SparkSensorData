@@ -93,7 +93,7 @@ The Spark job takes three parameters
 ```
 dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar 127.0.0.1 127.0.0.1 9999
 ```
-You get some output confirming what's happening when the SPark job starts:
+You get some output confirming what's happening when the Spark job starts:
 ```
 Spark Master Host   = 127.0.0.1
 Cassandra Host      = 127.0.0.1
