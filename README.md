@@ -51,7 +51,7 @@ locate <file to find>
 
 ##Exercise 1 - send data by hand
 
-Open three terminal windows. First you'll need to clone the repo
+Open three terminal windows. First you'll need to clone the repo in one of the windows.
 
 ```
 $ git clone https://github.com/simonambridge/SparkSensorData
@@ -75,21 +75,25 @@ $ sbt package
 ```
 
 It's important to do the steps in the right order.
-First we will start netcat - we will choose port 9999 for this. In one of the terminal windows type:
+First we will start netcat - netcat will allow us to send data to a port. We will use port 9999 for this. 
+
+In one of the terminal windows type:
 ```
 nc -lk localhost 9999
 ````
+Netcat is now sitting there 'connected' to port 9999 on the local machine.
 
-In another terminal windows start the Spark job
-It takes three parameters 
-- the hostname or IP of the Cassandra host
+In another terminal window start the Spark job. This will receive any data that we will send using netcat.
+
+The Spark job takes three parameters 
+- the hostname or IP of the  host running the Cassandra database that we will store data in
 - the hostname or IP of the Spark Master node
-- the port to use to stream the data
+- the port to use to stream/receive the data
 
 ```
 dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar 127.0.0.1 127.0.0.1 9999
 ```
-You get some output confirming what's happening:
+You get some output confirming what's happening when the SPark job starts:
 ```
 Spark Master Host   = 127.0.0.1
 Cassandra Host      = 127.0.0.1
@@ -128,6 +132,7 @@ And see the records in the sparsensordata.sensordata table:
 ```
 > select * from sparsensordata.sensordata;
 ```
+We will re-run this query as required to demonstrate the data arriving from the Spark job.
 
 Now go back to the second window (to run netcat) and type in some comma separated pairs of data e.g.
 ```
@@ -139,7 +144,7 @@ nc -lk localhost 9999
 ```
 **NB** if you do not use commas you will generate an ```java.lang.ArrayIndexOutOfBoundsException``` error and the Spark job will fail.
 
-In the cqlsh window you should see your data arriving in the sensordata table:
+In the cqlsh window run the query again and you will see the data pars that you typed in arriving in the sensordata table:
 ```
 > select * from sparksensordata.sensordata ;
 
@@ -153,7 +158,7 @@ In the cqlsh window you should see your data arriving in the sensordata table:
 (4 rows)
 ```
 
-You can also push the contents of the csv file (150 records) to the port before starting the Spark job:
+You can try pushing the contents of the csv file (150 records) to the port before starting the Spark job:
 ```
 cat SensorData2.csv | nc -lk localhost 9999
 ```
@@ -162,21 +167,21 @@ Then run the Spark job and see how many records there are in Cassandra - about 3
 
 ##Exercise 2 - use a data generator
 
-For this exercise we'll use a Java data generator netCat.java:
+For this exercise we'll use the Java data generator netCat.java:
 
 Navigate to the source directory and compile the netCat.java source file:
 ```
 cd ./src/main/java
 javac netCat.java
 ```
-netCat takes four parameters:
-- data type - linear or non-linear
+Java netCat takes four parameters:
+- data type - generate a linear or non-linear dataset
 - sample rate in ms
-- number of samples
-- streaming port
+- number of samples to send
+- streaming port to send the data to
 
 
-In this example netCat will send 1000 non-linear samples @ 10 per second (1 per 100ms) to port 8080
+In this example Java netCat will send 1000 non-linear samples @ 50 samples per second (1 per 20ms) to port 8080
 ```
 $ java netCat n 100 1000 8080
 *****************************************
@@ -200,9 +205,9 @@ p100,5.161374045313633
 
 OK, lets test it.
 
-First we can test netCat to show how it pushes data to a network port. 
+First we can test Java netCat to show how it pushes data to a network port. 
 
-In a terminal window start a netCat run:
+In a terminal window start a Java netCat run:
 ```
 java netCat n 20 100 9999
 *****************************************
@@ -234,7 +239,7 @@ p100,1.5396150741347898
 
 Now lets use it with Spark streaming...
 
-Start netCat as shown above to send some data - non-linear (pseudo random) two samples per second:
+Start netCat as shown above to send some data - 100 non-linear (pseudo random) samples @ two samples per second:
 ```
 java netCat n 500 100 9999
 
@@ -270,7 +275,7 @@ STEP 5: Creating SparkSensorData schema...
 STEP 6: Parsing incoming data...<ID>,<value> and save to Cassandra
 ```
 
-In the netCat window you should see records being written:
+In the Java netCat window you should see records being written:
 ```
 p100,1.1106579192248016
 p100,0.933662716664309
@@ -297,10 +302,10 @@ cqlsh:demo> select * from sensordata;
  p100 | 2015-03-23 11:37:45+0000 | 0.3547881245613098
 ```
 
-You can run the netCat job again while the Spark job is still running to inject more data into Cassandra.
+You can re-run the netCat job again while the Spark job is still running to inject more data into Cassandra.
 
 
-##Graphing
+##Visualising The Data In Cassandra
 
 The idea here is just to make a simple way of viewing the data generated and streamed into Cassandra. You could use something like this to build a dashboard.
 
