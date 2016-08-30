@@ -307,7 +307,7 @@ You can re-run the netCat job again while the Spark job is still running to inje
 
 ##Visualising The Data In Cassandra
 
-The idea here is just to make a simple way of viewing the data generated and streamed into Cassandra. You could use something like this to build a dashboard.
+The idea here is just to make a simple way of viewing the data generated and streamed into Cassandra. You could use something like this to build a dashboard (but it would need to be a lot prettier than this....).
 
 This example uses the Datastax Cassandra driver and xChart graph libraries. You will also need slf4j, guava and netty.
 ```
