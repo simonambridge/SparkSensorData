@@ -124,13 +124,14 @@ ERROR 2016-06-10 14:49:58,195 org.apache.spark.streaming.scheduler.ReceiverTrack
 ```
 
 
+Note that the Spark job will create the Cassandra schema if one doesn't already exist.
 In a third window start cqlsh:
 ```
 cqlsh `hostname`
 ```
-And see the records in the sparsensordata.sensordata table:
+And we can see any records in the sparksensordata.sensordata table:
 ```
-> select * from sparsensordata.sensordata;
+> select * from sparksensordata.sensordata;
 ```
 We will re-run this query as required to demonstrate the data arriving from the Spark job.
 
@@ -144,7 +145,7 @@ nc -lk localhost 9999
 ```
 **NB** if you do not use commas you will generate an ```java.lang.ArrayIndexOutOfBoundsException``` error and the Spark job will fail.
 
-In the cqlsh window run the query again and you will see the data pars that you typed in arriving in the sensordata table:
+In the cqlsh window run the query again and you will see the data pairs that you typed in arriving in the sensordata table:
 ```
 > select * from sparksensordata.sensordata ;
 
@@ -219,12 +220,12 @@ Waiting for listener........
 ```
 >**NB** netCat sits and waits for a listener on the port (to receive the streamed data) before it sends anything.
 
-In another terminal window use nc to listen for output: 
+In another terminal window use Linux nc to listen for output: 
 ```
 $ nc localhost 9999
 ```
 
-Data now appears in both windows - in both the window sending data to the port, and in the window where we told nc to listen to the port..
+Data now appears in both windows - in the netCat window sending data to the port, and in the window where we told nc to listen to the port..
 ```
 p100,0.06769868828261028
 p100,1.1106579192248016
@@ -237,9 +238,9 @@ p100,1.305075478974862
 p100,1.5396150741347898
 ```
 
-Now lets use it with Spark streaming...
+Now that we know all the parts are working, lets use it with Spark streaming...!
 
-Start netCat as shown above to send some data - 100 non-linear (pseudo random) samples @ two samples per second:
+In the netCat window, as shown above, send some data - 100 non-linear (pseudo random) samples @ two samples per second:
 ```
 java netCat n 500 100 9999
 
@@ -253,7 +254,7 @@ Waiting for listener........
 
 Nothing happens until the receiver starts taking data from the port.
 
-Start the Spark streaming job to stream from the port:
+So we need to start the Spark streaming job to stream from the port into Spark:
 ```
 dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar 127.0.0.1 127.0.0.1 9999
 ```
@@ -304,10 +305,11 @@ cqlsh:demo> select * from sensordata;
 
 You can re-run the netCat job again while the Spark job is still running to inject more data into Cassandra.
 
+That's it - you've generated random data and successfully streamed it into a Cassandra table via a Spark streaming consumer.
 
 ##Visualising The Data In Cassandra
 
-The idea here is just to make a simple way of viewing the data generated and streamed into Cassandra. You could use something like this to build a dashboard (but it would need to be a lot prettier than this....).
+The idea here is just to make a simple way of viewing the data generated and streamed into Cassandra. You could use something like this to build a dashboard (but it would need to be *a lot* prettier than this....).
 
 This example uses the Datastax Cassandra driver and xChart graph libraries. You will also need slf4j, guava and netty.
 ```
