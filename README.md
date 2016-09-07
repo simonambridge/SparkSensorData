@@ -4,7 +4,7 @@ Demonstrate high speed ingestion of sensor data
 -----------------------------------------------
 
 This demo demonstrates how data can be streamed to a Spark receiver listening to a network port.
-The demo coonsists of three parts:
+The demo consists of three parts:
 - netCat       - a data generator written in Java
 - SparkIngest  - a Spark streaming job written in Scala
 - casChart     - simple way to visualise simple data using java
