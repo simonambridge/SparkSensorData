@@ -10,6 +10,7 @@ The demo consists of three parts:
 - casChart     - simple way to visualise simple data using java
 
 ##Pre-Requisites
+### DataStax Enterprise (release 5.0.2 at time of publication)
 You'll need a working installation of DataStax Enterprise.
 
 - Ubuntu/Debian - https://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/install/installDEBdse.html
