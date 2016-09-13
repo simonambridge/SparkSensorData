@@ -42,7 +42,7 @@ metrics-core-3.0.2.jar
 >See ```build.sbt``` for more details.
 
 ###Useful Linux tool - ```locate```
-You can use this to easily locate files. I like it.
+You can use this to easily locate files on disk. I like it.
 ```
 apt-get install locate
 ```
