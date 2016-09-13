@@ -87,7 +87,7 @@ In one of the terminal windows type:
 ```
 nc -lk localhost 9999
 ````
-Netcat is now sitting there 'connected' to port 9999 on the local machine.
+Netcat is now sitting there listening to port 9999 on the local machine.
 
 In another terminal window start the Spark job. This will receive any data that we will send using netcat.
 
@@ -121,7 +121,7 @@ if you dont provide three parameters you'll get an error before exiting:
 ```
 Error - one or more missing parameters
 Usage is:
-dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar <cassandraHost> <sparkMasterHost> <data port>
+$ dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar <cassandraHost> <sparkMasterHost> <data port>
 ```
 
 > **NB** You can ignore any connection refused errors like that shown below - this happens when the streaming job isn't receiving any data.
