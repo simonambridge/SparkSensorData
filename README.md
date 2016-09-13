@@ -250,7 +250,7 @@ Now that we know all the parts are working, lets use it with Spark streaming...!
 
 In the netCat window, as shown above, send some data - 100 non-linear (pseudo random) samples @ two samples per second:
 ```
-java netCat n 500 100 9999
+$ java netCat n 500 100 9999
 
 *****************************************
 Data sample type: Non-linear
