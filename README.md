@@ -218,7 +218,7 @@ First we can test Java netCat to show how it pushes data to a network port.
 
 In a terminal window start a Java netCat run:
 ```
-java netCat n 20 100 9999
+$ java netCat n 20 100 9999
 *****************************************
 Data sample type: Non-linear
 Data sample rate: 20ms
