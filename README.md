@@ -81,7 +81,7 @@ $ sbt package
 ```
 
 It's important to do the steps in the right order.
-First we will start the Linux netcat utility - netcat allows us to send data to a port. We will use port 9999 for this. 
+First we will start the Linux nc (netcat) utility - nc allows us to send data to a port. We will use port 9999 for this. 
 
 In one of the terminal windows type:
 ```
@@ -141,7 +141,7 @@ And we can see any records in the sparksensordata.sensordata table:
 ```
 We will re-run this query as required to demonstrate the data arriving from the Spark job.
 
-Now go back to the second window (to run netcat) and type in some comma separated pairs of data e.g.
+Now go back to the second window (where we kicked off nc) and type in some comma separated pairs of data e.g.
 ```
 nc -lk localhost 9999
 1,2
