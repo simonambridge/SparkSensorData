@@ -80,7 +80,9 @@ $ sbt package
 [success] Total time: 9 s, completed Mar 21, 2015 2:28:15 PM
 ```
 
-It's important to do the steps in the right order.
+It's important to do the steps in the right order. This is what we are aiming for:
+![alt text] (https://raw.githubusercontent.com/simonambridge/SparkSensorData/master/sparksensordata_1.png)
+
 First we will start the Linux nc (netcat) utility - nc allows us to send data to a port. We will use port 9999 for this. 
 
 In one of the terminal windows type:
@@ -216,7 +218,7 @@ First we can test Java netCat to show how it pushes data to a network port.
 
 In a terminal window start a Java netCat run:
 ```
-java netCat n 20 100 9999
+$ java netCat n 20 100 9999
 *****************************************
 Data sample type: Non-linear
 Data sample rate: 20ms
@@ -245,10 +247,12 @@ p100,1.5396150741347898
 ```
 
 Now that we know all the parts are working, lets use it with Spark streaming...!
+THis is what we're doing in this exercise:
+![alt text] (https://raw.githubusercontent.com/simonambridge/SparkSensorData/master/sparksensordata_2.png)
 
 In the netCat window, as shown above, send some data - 100 non-linear (pseudo random) samples @ two samples per second:
 ```
-java netCat n 500 100 9999
+$ java netCat n 500 100 9999
 
 *****************************************
 Data sample type: Non-linear
