@@ -80,7 +80,9 @@ $ sbt package
 [success] Total time: 9 s, completed Mar 21, 2015 2:28:15 PM
 ```
 
-It's important to do the steps in the right order.
+It's important to do the steps in the right order. This is what we are aiming for:
+![alt text] (https://raw.githubusercontent.com/simonambridge/SparkSensorData/master/sparksensordata_1.png)
+
 First we will start the Linux nc (netcat) utility - nc allows us to send data to a port. We will use port 9999 for this. 
 
 In one of the terminal windows type:
