@@ -97,7 +97,7 @@ The Spark job takes three parameters
 - the port to use to stream/receive the data
 
 ```
-dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar 127.0.0.1 127.0.0.1 9999
+$ dse spark-submit --class SparkIngest ./target/scala-2.10/sparkportstream_2.10-1.0.jar 127.0.0.1 127.0.0.1 9999
 ```
 You get some output confirming what's happening when the Spark job starts:
 ```
