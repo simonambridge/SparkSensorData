@@ -12,8 +12,8 @@ The demo consists of three parts:
 ##Pre-Requisites
 You'll need a working installation of DataStax Enterprise.
 
-- Ubuntu/Debian - https://docs.datastax.com/en/datastax_enterprise/4.8/datastax_enterprise/install/installDEBdse.html
-- Red Hat/Fedora/CentOS/Oracle Linux - https://docs.datastax.com/en/datastax_enterprise/4.8/datastax_enterprise/install/installRHELdse.html
+- Ubuntu/Debian - https://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/install/installDEBdse.html
+- Red Hat/Fedora/CentOS/Oracle Linux - https://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/install/installRHELdse.html
 
 To setup your environment, you'll also need the following resources:
 
