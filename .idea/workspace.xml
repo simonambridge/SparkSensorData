@@ -636,8 +636,6 @@
       <change type="DELETED" beforePath="/u02/dev/dse_dev/SparkSensorData/push.sh" afterPath="" />
       <change type="DELETED" beforePath="/u02/dev/dse_dev/SparkSensorData/submit.sh" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="/u02/dev/dse_dev/SparkSensorData/.idea/workspace.xml" afterPath="/u02/dev/dse_dev/SparkSensorData/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="/u02/dev/dse_dev/SparkSensorData/src/main/scala/Spark-ingest.scala" afterPath="/u02/dev/dse_dev/SparkSensorData/src/main/scala/Spark-ingest.scala" />
     </list>
     <ignored path="SparkSensorData.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -689,8 +687,8 @@
       <file leaf-file-name="Spark-ingest.scala" pinned="false" current-in-tab="true">
         <entry file="file:///u02/dev/dse_dev/SparkSensorData/src/main/scala/Spark-ingest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.025641026">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.99854016">
+              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -721,8 +719,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
     <option name="y" value="24" />
-    <option name="width" value="1615" />
-    <option name="height" value="830" />
+    <option name="width" value="1565" />
+    <option name="height" value="813" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1172,16 +1170,16 @@
       <option name="number" value="Default" />
       <updated>1466382694406</updated>
       <workItem from="1467411558874" duration="808000" />
-      <workItem from="1467450586996" duration="1870000" />
+      <workItem from="1467450586996" duration="3065000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2678000" />
+    <option name="totallyTimeSpent" value="3873000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1615" height="830" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="24" width="1565" height="813" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1194,7 +1192,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24952137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25774556" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1213,6 +1211,14 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1302,8 +1308,8 @@
     </entry>
     <entry file="file:///u02/dev/dse_dev/SparkSensorData/src/main/scala/Spark-ingest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025641026">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.99854016">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
           <folding />
         </state>
       </provider>

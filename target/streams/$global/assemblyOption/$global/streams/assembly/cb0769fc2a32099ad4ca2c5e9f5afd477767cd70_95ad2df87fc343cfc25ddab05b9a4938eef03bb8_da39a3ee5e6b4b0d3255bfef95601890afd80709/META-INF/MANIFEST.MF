@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Built-By: vfed
-Build-Jdk: 1.7.0_71
-Premain-Class: org.jpmml.agent.Main
-Created-By: Apache Maven 3.0.5
-Can-Redefine-Classes: true
-Can-Retransform-Classes: true
-Archiver-Version: Plexus Archiver
-
