@@ -319,7 +319,11 @@ That's it - you've generated random data and successfully streamed it into a Cas
 
 ##Visualising The Data In Cassandra
 
-The idea here is just to make a simple way of viewing the data generated and streamed into Cassandra. You could use something like this to build a dashboard (but it would need to be *a lot* prettier than this....).
+You can use a number of tools or technologies to visualise data in Cassandra.
+
+For a Nodejs/d3 ReST API/dashboard approach see my repo here: https://github.com/ESeufert/d3.js-dashboard-examples
+
+For a simple way of viewing the data generated and streamed into Cassandra you could use something like this to build a graph.
 
 This example uses the Datastax Cassandra driver and xChart graph libraries. You will also need slf4j, guava and netty.
 ```
