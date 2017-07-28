@@ -81,7 +81,10 @@ $ sbt package
 ```
 
 It's important to do the steps in the right order. This is what we are aiming for:
-![alt text] (https://raw.githubusercontent.com/simonambridge/SparkSensorData/master/sparksensordata_1.png)
+
+<p align="center">
+  <img src="sparksensordata_1.png"/>
+</p>
 
 First we will start the Linux nc (netcat) utility - nc allows us to send data to a port. We will use port 9999 for this. 
 
@@ -247,8 +250,11 @@ p100,1.5396150741347898
 ```
 
 Now that we know all the parts are working, lets use it with Spark streaming...!
-THis is what we're doing in this exercise:
-![alt text] (https://raw.githubusercontent.com/simonambridge/SparkSensorData/master/sparksensordata_2.png)
+This is what we're doing in this exercise:
+
+<p align="center">
+  <img src="sparksensordata_2.png"/>
+</p>
 
 In the netCat window, as shown above, send some data - 100 non-linear (pseudo random) samples @ two samples per second:
 ```
