@@ -177,7 +177,7 @@ cat SensorData2.csv | nc -lk localhost 9999
 Then run the Spark job and see how many records there are in Cassandra - about 35 to 40?
 
 
-##Exercise 2 - use a data generator
+## Exercise 2 - use a data generator
 
 For this exercise we'll use the Java data generator netCat.java:
 
