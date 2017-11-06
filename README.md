@@ -18,7 +18,7 @@ You'll need a working installation of DataStax Enterprise.
 
 To setup your environment, you'll also need the following resources:
 
-###Install sbt
+### Install sbt
 sbt is the Scala Build Tool
 
 ```
@@ -28,7 +28,7 @@ sudo apt-get update
 sudo apt-get install sbt
 ```
 
-###Install code dependencies
+### Install code dependencies
 ```
 http://xeiam.com/xchart-example-code/
 http://slf4j.org/dist/slf4j-1.7.10.tar.gz
@@ -41,7 +41,7 @@ metrics-core-3.0.2.jar
 
 >See ```build.sbt``` for more details.
 
-###Useful Linux tool - ```locate```
+### Useful Linux tool - ```locate```
 You can use this to easily locate files on disk. I like it.
 ```
 apt-get install locate
@@ -55,7 +55,7 @@ Thereafter find any file using e.g.:
 locate <file to find>
 ```
 
-##Exercise 1 - send data by hand
+## Exercise 1 - send data by hand
 
 Open three terminal windows. First you'll need to clone the repo in one of the windows.
 
@@ -323,7 +323,7 @@ You can re-run the netCat job again while the Spark job is still running to inje
 
 That's it - you've generated random data and successfully streamed it into a Cassandra table via a Spark streaming consumer.
 
-##Visualising The Data In Cassandra
+## Visualising The Data In Cassandra
 
 You can use a number of tools or technologies to visualise data in Cassandra.
 
