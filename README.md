@@ -1,4 +1,4 @@
-#DataStax Enterprise - Apache Cassandra with Apache Spark - Sensor Data Ingestion
+# DataStax Enterprise - Apache Cassandra with Apache Spark - Sensor Data Ingestion
 
 Demonstrate high speed ingestion of sensor data
 -----------------------------------------------
@@ -9,7 +9,7 @@ The demo consists of three parts:
 - SparkIngest  - a Spark streaming job written in Scala
 - casChart     - simple way to visualise simple data using java
 
-##Pre-Requisites
+## Pre-Requisites
 ### DataStax Enterprise (release 5.0.2 at time of publication)
 You'll need a working installation of DataStax Enterprise.
 
